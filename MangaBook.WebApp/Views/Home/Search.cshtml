@@ -1,0 +1,110 @@
+﻿@model IEnumerable<MangaBook.Data.Entities.Manga>
+@{
+    ViewData["Title"] = "Tìm kiếm cho từ khóa ' " + ViewBag.Keyword + "'";
+}
+
+<div class="site-content">
+    <!--<header class="site-header">-->
+    <div class="c-search-header__wrapper" style="background-image: url(https://live.mangabooth.com/wp-content/themes/madara/images/bg-search.jpg);">
+        <div class="container">
+            <div class="search-content">
+                <form role="search" method="get" class="search-form manga-search-form ajax" action="/tim-kiem" style="max-width: 100%;">
+                    <span class="screen-reader-text">Search for:</span>
+                    <input type="text" class="search-field manga-search-field" placeholder="Search..." value="@if (ViewBag.Keyword != null) { Write(ViewBag.Keyword); } else { Write(""); } " name="s" />
+                    <input type="submit" class="search-submit" value="Search" />
+                    <i class="icon ion-md-search"></i>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="c-page-content">
+        <div class="content-area">
+            <div class="container">
+                <div class="row">
+                    <div class="main-col col-md-12 sidebar-hidden">
+
+                        <!-- container & no-sidebar-->
+                        <div class="main-col-inner">
+                            <div class="search-wrap">
+                                <div class="tab-wrap">
+                                    <div class="c-blog__heading style-2 font-heading">
+                                        <h1 class="h4"><i class="icon ion-ios-star"></i> Kết quả tìm kiếm cho "@ViewBag.Keyword"</h1>
+                                    </div>
+                                </div>
+                                <!-- Tab panes -->
+                                <div class="tab-content-wrap">
+                                    <div role="tabpanel" class="c-tabs-item">
+                                        @foreach(var item in Model) { 
+                                        <div class="row c-tabs-item__content">
+                                            <div class="col-4 col-12 col-md-2">
+                                                <div class="tab-thumb c-image-hover">
+                                                    <a asp-controller="Manga" asp-action="Details" asp-route-slug="@item.Slug" title="@item.Name">
+                                                        <img width="193"
+                                                             height="278"
+                                                             data-src="./uploads/manga/@item.UrlImage"
+                                                             data-srcset="./uploads/manga/@item.UrlImage 193w, ./uploads/manga/@item.UrlImage 125w"
+                                                             data-sizes="(max-width: 193px) 100vw, 193px"
+                                                             class="img-responsive lazyload effect-fade"
+                                                             src="./uploads/manga/@item.UrlImage"
+                                                             style="padding-top: 278px;"
+                                                             alt="@item.Name" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-8 col-12 col-md-10">
+                                                <div class="tab-summary">
+                                                    <div class="post-title">
+                                                        <h3 class="h4"><a asp-controller="Manga" asp-action="Details" asp-route-slug="@item.Slug">@item.Name</a></h3>
+                                                    </div>
+                                                    <div class="post-content">
+                                                        <div class="post-content_item mg_author">
+                                                            <div class="summary-heading">
+                                                                <h5>
+                                                                    Authors
+                                                                </h5>
+                                                            </div>
+                                                            <div class="summary-content">
+                                                                <a href="#">@item.Author</a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="post-content_item mg_artists">
+                                                            <div class="summary-heading">
+                                                                <h5>
+                                                                    Release Year
+                                                                </h5>
+                                                            </div>
+
+                                                            <div class="summary-content">
+                                                                <a href="#">@item.ReleaseYear</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post-content_item mg_genres">
+                                                            <div class="summary-heading">
+                                                                <h5>
+                                                                    Status
+                                                                </h5>
+                                                            </div>
+                                                            <div class="summary-content">
+                                                                <a href="#">@if (item.MangaStatus == 0) { Write("On Going"); } else if (item.MangaStatus == 1) { Write("Full"); }</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        }
+                                    </div>
+                             
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

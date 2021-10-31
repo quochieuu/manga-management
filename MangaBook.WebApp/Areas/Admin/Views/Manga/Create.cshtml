@@ -1,0 +1,98 @@
+﻿@model MangaBook.Data.Entities.Manga
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Manga</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-8">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label"></label>
+                        <textarea asp-for="Description" class="form-control"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Genre</label>
+                        <input name="genre" id="itags" class="form-control" />
+                        <small>Gõ dấu phẩy để thêm nhiều danh mục</small>
+                        <span class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Author" class="control-label"></label>
+                        <input asp-for="Author" class="form-control" />
+                        <span asp-validation-for="Author" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label"></label>
+                        <input type="file" name="files" class="form-control" />
+                        <span class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="ReleaseYear" class="control-label"></label>
+                        <input asp-for="ReleaseYear" class="form-control" />
+                        <span asp-validation-for="ReleaseYear" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input asp-for="IsHot" /> @Html.DisplayNameFor(model => model.IsHot)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="MangaStatus" class="control-label"></label>
+                        <select asp-for="MangaStatus" class="form-control">
+                            <option value="0">On going</option>
+                            <option value="1">Full</option>
+                        </select>
+                        <span asp-validation-for="MangaStatus" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/tags/jquery.amsify.suggestags.js"></script>
+    <link href="~/js/tags/jquerysctipttop.css" rel="stylesheet" />
+    <link href="~/js/tags/amsify.suggestags.css" rel="stylesheet" />
+    <script>
+        $('#itags').amsifySuggestags({
+            suggestions: [
+                //'test'
+            ],
+            whiteList: false
+        }
+        );
+    </script>
+}

@@ -1,0 +1,472 @@
+﻿@model MangaBook.Data.Entities.Chapter
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="wrap">
+    <div class="body-wrap">
+        <div class="site-content">
+            <div class="c-page-content style-1 reading-content-wrap chapter-type-text" data-site-url="#">
+                <div class="content-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="main-col col-md-12 col-sm-12 sidebar-hidden">
+                                <h1 id="chapter-heading">@Model.Name</h1>
+
+                                <!-- container & no-sidebar-->
+                                <div class="main-col-inner">
+                                    <div class="c-blog-post">
+                                        <div class="entry-header header" id="manga-reading-nav-head" data-position="header" data-chapter="chapter-1" data-id="454">
+                                            <div class="wp-manga-nav">
+                                                <div class="entry-header_wrap">
+                                                    <div class="c-breadcrumb-wrapper">
+                                                        <div class="c-breadcrumb">
+                                                            <ol class="breadcrumb">
+                                                                <li>
+                                                                    <a href="/"> Home </a>
+                                                                </li>
+
+                                                                <li>
+                                                                    <a href="/"> @Model.Name </a>
+                                                                </li>
+
+                                                                <li class="active">
+                                                                    Chapter @Model.Number
+                                                                </li>
+                                                            </ol>
+                                                        </div>
+
+                                                        <div class="action-icon">
+                                                            <ul class="action_list_icon list-inline">
+                                                                <li>
+                                                                    <a href="javascript:void(0)" class="btn-text-reading-increase"><i class="icon ion-md-add"></i></a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="javascript:void(0)" class="btn-text-reading-decrease"><i class="icon ion-md-remove"></i></a>
+                                                                </li>
+                                                                <li>
+                                                                    <script type="text/javascript">
+                                                                                var requireLogin2BookMark = true;
+                                                                    </script>
+                                                                    <a href="#" class="wp-manga-action-button" data-action="bookmark" data-post="454" data-chapter="1678" data-page="1" title="Bookmark">
+                                                                        <i class="icon ion-ios-bookmark"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#" class="wp-manga-action-button" data-action="toggle-contrast" title="Toggle Dark/Light Mode"><i class="icon ion-md-contrast"></i></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="select-pagination">
+                                                    <div class="nav-links">
+                                                        <div class="nav-next"><a href="#" class="btn next_page" title="Chapter 2">Next</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="entry-content">
+                                            <div class="entry-content_wrap">
+                                                <div class="read-container">
+
+                                                    <div class="reading-content">
+                                                        <input type="hidden" id="wp-manga-current-chap" data-id="1678" value="chapter-1" />
+
+                                                        <div class="text-left">
+
+                                                            @Html.Raw(Model.Content)
+                                                        </div>
+                                                        <div id="text-chapter-toolbar">
+                                                            <a href="#"><i class="icon ion-md-settings"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="entry-header footer" id="manga-reading-nav-foot" data-position="footer" data-id="454">
+                                            <div class="wp-manga-nav">
+                                                <div class="select-view">
+                                                    <!-- select volume -->
+                                                    <!-- select chapter -->
+                                                    <div class="c-selectpicker selectpicker_chapter chapters_selectbox_holder" data-manga="454" data-chapter="chapter-1" data-vol="0" data-type="content">
+                                                        <label>
+                                                            <select class="c-selectpicker selectpicker_chapter selectpicker single-chapter-select" style="" for="volume-id-0">
+                                                                <option class="short" data-limit="40" value="chapter-1" data-redirect="https://live.mangabooth.com/manga/manga-text-chapter/chapter-3/">Chapter 3</option>
+
+                                                                <option class="short" data-limit="40" value="chapter-1" data-redirect="https://live.mangabooth.com/manga/manga-text-chapter/chapter-2/">Chapter 2</option>
+
+                                                                <option class="short" data-limit="40" value="chapter-1" data-redirect="https://live.mangabooth.com/manga/manga-text-chapter/chapter-1/" selected="selected">
+                                                                    Chapter 1
+                                                                </option>
+                                                            </select>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="select-pagination">
+                                                    <div class="nav-links">
+                                                        <div class="nav-next"><a href="#" class="btn next_page" title="Chapter 2">Next</a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="main-col col-12 col-sm-8 col-md-8 col-lg-8">
+                                            <!-- comments-area -->
+
+                                            <h4>Comments for chapter &quot;Chapter 1&quot;</h4>
+                                            <div id="manga-discussion" class="c-blog__heading style-2 font-heading">
+                                                <i class="ion-ios-star"></i>
+                                                <h4>MANGA DISCUSSION</h4>
+                                            </div>
+                                            <div class="manga-discussion wrapper">
+                                                <div class="hr mv40"></div>
+
+                                                <div id="madara-comments" class="comments-area">
+                                                    <div id="respond" class="comment-respond">
+                                                        <h4 id="reply-title" class="comment-reply-title">
+                                                            Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="#" style="display: none;">Cancel reply</a></small>
+                                                        </h4>
+                                                        <form action="/add-manga-comment" method="post" class="comment-form">
+                                                            <p class="comment-notes">
+                                                                <span id="email-notes">Your email address will not be published.</span>
+                                                                Required fields are marked <span class="required">*</span>
+                                                            </p>
+                                                            <input type="hidden" name="chapSlug" value="@Model.Slug" />
+                                                            <input type="hidden" name="mangaId" value="@ViewBag.MangaId" />
+                                                            <p class="comment-form-comment">
+                                                                <textarea name="Content" cols="45" rows="8" aria-required="true" placeholder="Enter your comment here..."></textarea>
+                                                            </p>
+                                                            <p class="form-submit">
+                                                                <input name="submit" type="submit" id="submit" class="submit" value="Post Comment" />
+                                                            </p>
+                                                        </form>
+                                                    </div>
+                                                    <h4 class="comments-title">
+                                                        Comments
+                                                    </h4>
+                                                    <ol class="comment-list" id="comments">
+                                                        @foreach (var cmt in ViewBag.ListComment)
+                                                        {
+                                                            <li class="comment byuser comment-author-san4es_tv even thread-even depth-1" id="comment-717">
+                                                                <article id="div-comment-717" class="comment-body">
+                                                                    <div class="block block-left">
+                                                                        <footer class="comment-meta">
+                                                                            <div class="comment-avatar">
+                                                                                @if (cmt.AuthorAvatar == null)
+                                                                                {
+                                                                                    <img src="~/uploads/avatar/noavt.jpg" />
+                                                                                }
+                                                                                else
+                                                                                {
+                                                                                    <img alt="" src="~/uploads/avatar/@cmt.AuthorAvatar" srcset="~/uploads/avatar/@cmt.AuthorAvatar 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy">
+                                                                                }
+                                                                            </div>
+                                                                        </footer>
+                                                                        <!-- .comment-meta -->
+                                                                    </div>
+                                                                    <div class="block block-right">
+                                                                        <div class="comment-author">
+                                                                            <h6 class="heading fn">@cmt.AuthorName</h6>
+                                                                        </div>
+                                                                        <!--!comment-author-->
+                                                                        <div class="comment-content">
+                                                                            <p>@cmt.Content</p>
+                                                                        </div>
+                                                                        <!-- .comment-content -->
+                                                                        <div class="comment-metadata">
+                                                                            <a href="#">
+                                                                                @cmt.PublishedDate.ToString("MM/dd/yyyy h:mm tt")
+                                                                            </a>
+                                                                        </div>
+                                                                        <!-- .comment-metadata -->
+                                                                    </div>
+
+
+                                                                </article>
+                                                            </li>
+                                                        }
+                                                        <!-- #comment-## -->
+                                                    </ol>
+                                                    <!-- #respond -->
+                                                </div>
+                                                <!-- #comments -->
+                                            </div>
+
+                                            <!-- END comments-area -->
+                                        </div>
+
+                                        <div class="sidebar-col col-md-4 col-sm-4">
+                                            <div id="main-sidebar" class="main-sidebar" role="complementary">
+                                                <div class="row">
+                                                    <div id="manga-genres-id-7" class="widget col-xs-12 col-md-12 bordered no-icon heading-style-1 manga-genres-class-name">
+                                                        <div class="widget__inner manga-genres-class-name__inner c-widget-wrap">
+                                                            <div class="genres_wrap">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <div class="widget-heading font-nav"><h5 class="heading">GENRES</h5></div>
+                                                                        <div class="widget-content">
+                                                                            <div class="genres__collapse" style="display: block;">
+                                                                                <div class="row genres">
+                                                                                    <ul class="list-unstyled">
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/action/"> Action </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/adult/"> Adult </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/adventure/"> Adventure </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/anime/"> Anime </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/cartoon/"> Cartoon </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/comedy/"> Comedy </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/comic/"> Comic </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/cooking/"> Cooking </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/detective/"> Detective </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/doujinshi/"> Doujinshi </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/drama/"> Drama </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/ecchi/"> Ecchi </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/fantasy/"> Fantasy </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/harem/"> Harem </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/historical/"> Historical </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/horror/"> Horror </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/josei/"> Josei </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/live-action/"> Live action </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/manga/"> Manga </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/manhua/"> Manhua </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/manhwa/"> Manhwa </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/martial-arts/"> Martial Arts </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/mature/"> Mature </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/mecha/"> Mecha </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/mystery/"> Mystery </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/one-shot/"> One shot </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/romance/"> Romance </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/school-life/"> School Life </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/sci-fi/"> Sci-fi </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/seinen/"> Seinen </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/shoujo/"> Shoujo </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/shoujo-ai/"> Shoujo Ai </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/shounen/"> Shounen </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/shounen-ai/"> Shounen Ai </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/slice-of-life/"> Slice of Life </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/smut/"> Smut </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/soft-yaoi/"> Soft Yaoi </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/soft-yuri/"> Soft Yuri </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/sports/"> Sports </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/supernatural/"> Supernatural </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/tragedy/"> Tragedy </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/webtoon/"> Webtoon </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/yaoi/"> Yaoi </a>
+                                                                                        </li>
+                                                                                        <li class="col-xs-6 col-sm-6">
+                                                                                            <a href="https://live.mangabooth.com/manga-genre/yuri/"> Yuri </a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div id="manga-history-id-4" class="widget col-xs-12 col-md-12 background no-icon heading-style-1 manga-history-widget">
+                                                        <div class="widget__inner manga-history-widget__inner c-widget-wrap">
+                                                            <div class="widget-heading font-nav"><h5 class="heading">MY READING HISTORY</h5></div>
+                                                            <div class="widget-content">
+                                                                <div class="my-history">
+                                                                    <!-- -->
+                                                                    <span class="no-histories" style="display: none;">You don&#039;t have anything in histories</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <script type="text/javascript">
+                                                            jQuery(document).on("ready", function () {
+                                                                jQuery.ajax({
+                                                                    url: manga.ajax_url,
+                                                                    type: "GET",
+                                                                    data: {
+                                                                        action: "guest_histories",
+                                                                        count: 3,
+                                                                    },
+                                                                    success: function (html) {
+                                                                        if (html && html != "0") {
+                                                                            jQuery("#manga-history-id-4 .my-history").html(html);
+                                                                        } else {
+                                                                            jQuery("#manga-history-id-4 .no-histories").show();
+                                                                        }
+                                                                    },
+                                                                    complete: function (e) {},
+                                                                });
+                                                            });
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="wp-manga-tags-wrapper">
+                                        <div class="wp-manga-tags">
+                                            <h5>Tags:</h5>
+                                            <div class="wp-manga-tags-list">
+                                                <a href="https://live.mangabooth.com/manga-tag/achitaka/" class="">Achitaka</a>, <a href="https://live.mangabooth.com/manga-tag/action/" class="">Action</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="site-content"> -->
+
+        <footer class="site-footer">
+            <div class="ad c-ads custom-code footer-ads col-md-12"><img width="730" height="92" src="https://live.mangabooth.com/wp-content/uploads/2017/10/ads-1.jpg" alt="Madara Ads Footer" /></div>
+            <div class="top-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="wrap_social_account">
+                                <ul class="list-inline social_account__item">
+                                    <li>
+                                        <a class="social-icons" target="_blank" rel="noopener" href="#" title="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="social-icons" target="_blank" rel="noopener" href="#" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="social-icons" target="_blank" rel="noopener" href="#" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="social-icons" target="_blank" rel="noopener" href="#" title="Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="social-icons" target="_blank" rel="noopener" href="#" title="Pinterest"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="social-icons" target="_blank" rel="noopener" href="#" title="Youtube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li>
+                                        <a class="social-icons" target="_blank" rel="noopener" href="#" title="Flickr"><i class="fab fa-flickr" aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="nav-footer">
+                                <ul class="list-inline font-nav">
+                                    <li id="menu-item-76" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-76"><a href="/">HOME</a></li>
+                                    <li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-79"><a href="https://live.mangabooth.com/blog/">BLOG</a></li>
+                                    <li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="https://live.mangabooth.com/contact/">CONTACT US</a></li>
+                                    <li id="menu-item-77" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="https://live.mangabooth.com/about-us/">ABOUT US</a></li>
+                                    <li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80"><a href="#">COOKIE POLICY</a></li>
+                                </ul>
+                            </div>
+                            <div class="copyright">
+                                <p>&copy; 2021 Madara Inc. All rights reserved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div id="hover-infor"></div>
+    </div>
+    <!-- class="wrap" -->
+</div>

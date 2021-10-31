@@ -1,0 +1,113 @@
+﻿@model IEnumerable<MangaBook.Data.Entities.Manga>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    div#manga-item-454 img {
+        object-fit: cover;
+        height: 100%;
+    }
+
+    div#manga-item-454 {
+        height: 185px;
+    }
+</style>
+<div class="site-content">
+    <div class="c-page-content style-1">
+        <div class="content-area" style="">
+            <div class="container">
+                <div class="row">
+                    <div class="main-col col-md-8 col-sm-8">
+                        <div class="main-col-inner c-page">
+                            <div class="c-blog__heading style-2 font-heading">
+                                <h1 class="h4">
+                                    <i class="fas fa-blog"></i>
+
+                                    Truyện mới nhất
+                                </h1>
+                            </div>
+
+                            <div class="c-blog-listing c-page__content manga_content">
+                                <div class="c-blog__inner">
+                                    <div class="c-blog__content">
+                                        <div id="loop-content" class="page-content-listing item-big_thumbnail">
+                                            <div class="page-listing-item">
+                                                <div class="row row-eq-height">
+                                                    @foreach (var item in Model)
+                                                    {
+                                                        <div class="col-6 col-md-3 badge-pos-1">
+                                                            <div class="page-item-detail text">
+                                                                <div id="manga-item-454" class="item-thumb hover-details c-image-hover" data-post-id="454">
+                                                                    <a asp-controller="Manga" asp-action="Details" asp-route-slug="@item.Slug" title="@item.Name">
+                                                                        <img width="175"
+                                                                             height="238"
+                                                                             data-src="./uploads/manga/@item.UrlImage"
+                                                                             data-srcset="./uploads/manga/@item.UrlImage 175w, ./uploads/manga/@item.UrlImage 110w"
+                                                                             data-sizes="(max-width: 175px) 100vw, 175px"
+                                                                             class="img-responsive lazyload effect-fade"
+                                                                             src="./uploads/manga/@item.UrlImage"
+                                                                             style="padding-top: 238px;"
+                                                                             alt="@item.Name" />
+                                                                    </a>
+                                                                </div>
+                                                                <div class="item-summary">
+                                                                    <div class="post-title font-title">
+                                                                        <h3 class="h5"><span class="manga-title-badges new">NEW</span> 
+                                                                            <a asp-controller="Manga" asp-action="Details" asp-route-slug="@item.Slug">@item.Name</a>
+                                                                        </h3>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    }
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="sidebar-col col-md-4 col-sm-4">
+                        <div id="main-sidebar" class="main-sidebar" role="complementary">
+                            <div class="row">
+                                <div id="manga-genres-id-7" class="widget col-xs-12 col-md-12 bordered no-icon heading-style-1 manga-genres-class-name">
+                                    <div class="widget__inner manga-genres-class-name__inner c-widget-wrap">
+                                        <div class="genres_wrap">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="widget-heading font-nav"><h5 class="heading">GENRES</h5></div>
+                                                    <div class="widget-content">
+                                                        <div class="genres__collapse" style="display: block;">
+                                                            <div class="row genres">
+                                                                <ul class="list-unstyled">
+                                                                    @foreach(var genre in ViewBag.ListGenre)
+                                                                    {
+                                                                    <li class="col-xs-6 col-sm-6">
+                                                                        <a asp-controller="Manga" asp-action="ListMangaByGenre" asp-route-genreSlug="@genre.Slug"> @genre.Name </a>
+                                                                    </li>
+                                                                     }
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

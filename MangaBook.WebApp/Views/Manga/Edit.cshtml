@@ -1,0 +1,111 @@
+﻿@model MangaBook.Data.Entities.Manga
+
+@{
+    ViewData["Title"] = "Chỉnh sửa thông tin truyện";
+}
+
+<link href="~/css/profile.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="dashboard-body">
+        <div class="dashboard-caption">
+            <div class="dashboard-caption-header">
+                <h4><i class="ti-id-badge"></i>Thêm mới truyện</h4>
+            </div>
+
+            <div class="dashboard-caption-wrap">
+                <!-- row -->
+                <div class="row mrg-top-20">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <form asp-action="Edit">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="Id" />
+                            <div class="form-group">
+                                <label asp-for="Name" class="control-label"></label>
+                                <input asp-for="Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Description" class="control-label"></label>
+                                <textarea asp-for="Description" class="form-control"></textarea>
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Genre</label>
+                                <input name="genre" id="itags" class="form-control" value="@foreach (var t in ViewBag.GenreByManga) { Write(t.Name + ','); }" />
+                                <small>Gõ dấu phẩy để thêm nhiều danh mục</small>
+                                <span class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Slug" class="control-label"></label>
+                                <input asp-for="Slug" class="form-control" />
+                                <span asp-validation-for="Slug" class="text-danger"></span>
+                            </div>
+                            <img src="~/uploads/manga/@Model.UrlImage" style="width: 100px; display: block;" />
+                            <a href="#" id="actionChangeImage">Đổi Ảnh</a>
+                            <div class="form-group chang-image-inactive" id="changImage">
+                                <label asp-for="UrlImage" class="control-label"></label>
+                                <input id="ipFile" type="hidden" asp-for="UrlImage" class="form-control" />
+                                <span asp-validation-for="UrlImage" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Author" class="control-label"></label>
+                                <input asp-for="Author" class="form-control" />
+                                <span asp-validation-for="Author" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ReleaseYear" class="control-label"></label>
+                                <input asp-for="ReleaseYear" class="form-control" />
+                                <span asp-validation-for="ReleaseYear" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="MangaStatus" class="control-label"></label>
+                                <select asp-for="MangaStatus" class="form-control">
+                                    <option value="0">On Going</option>
+                                    <option value="1">Full</option>
+                                </select>
+                                <span asp-validation-for="MangaStatus" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" value="Save" class="btn btn-default" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .chang-image-inactive {
+        display: none;
+    }
+
+    .chang-image-active {
+        display: block;
+    }
+</style>
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+        $("#actionChangeImage").click(function () {
+            $("#changImage").attr("class", "form-group chang-image-active");
+            $("#ipFile").attr("type", "file");
+        })
+    </script>
+
+    <script src="~/js/tags/jquery.amsify.suggestags.js"></script>
+    <link href="~/js/tags/jquerysctipttop.css" rel="stylesheet" />
+    <link href="~/js/tags/amsify.suggestags.css" rel="stylesheet" />
+    <script>
+        $('#itags').amsifySuggestags({
+            suggestions: [
+                //'test'
+            ],
+            whiteList: false
+        }
+        );
+    </script>
+}

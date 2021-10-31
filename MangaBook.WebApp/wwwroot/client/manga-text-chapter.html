@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>Madara Demo &#8211; Manga WordPress Theme</title>
+       
+        <link rel="stylesheet" href="assets/includes/css/style.min.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/includes/css/home.css">
+        <link rel="stylesheet" href="assets/contents/css/wc-blocks-vendors-style.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/wc-blocks-style.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/shortcodes.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/woocommerce-layout.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)" />
+        <link rel="stylesheet" href="assets/contents/css/woocommerce.css" type="text/css" media="all" />
+        <style id="woocommerce-inline-inline-css" type="text/css">
+            .woocommerce form .form-row .required {
+                visibility: visible;
+            }
+        </style>
+        <link rel="stylesheet" href="hassets/contents/css/pagenavi-css.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/speaker.min.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/all.min.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/bootstrap.min.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/slick.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/slick-theme.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/style.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/ionicons.min.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/ct-icon/ct-icon.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/loaders.min.css" type="text/css" media="all" />
+        <style type="text/css">:root { --madara-main-color: #eb3349; } #pageloader.spinners { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999; background: #222; } p.madara-unyson { color: #ff0000; } .table.table-hover.list-bookmark tr:last-child td { text-align: center; } #adminmenu .wp-submenu li.current { display: none !important; } .show_tgmpa_version { float: right; padding: 0em 1.5em 0.5em 0; } .tgmpa > h2 { font-size: 23px; font-weight: 400; line-height: 29px; margin: 0; padding: 9px 15px 4px 0; } .update-php { width: 100%; height: 98%; min-height: 850px; padding-top: 1px; } .c-blog-post .entry-content .entry-content_wrap .read-container img.alignleft { margin: 10px 30px 10px 0 !important; } .c-blog-post .entry-content .entry-content_wrap .read-container img.alignright { margin: 10px 0px 10px 30px !important; } .read-container i.fas.fa-spinner.fa-spin { font-size: 31px; color: #888; } .c-blog-post .entry-content .entry-content_wrap .read-container img { cursor: pointer; } .choose-avatar .loading-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(255, 255, 255, 0.72); z-index: 1; display: none; } .choose-avatar .loading-overlay i.fas.fa-spinner { font-size: 40px; color: #ec3348; } .choose-avatar .loading-overlay .loading-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); } .choose-avatar.uploading .loading-overlay { display: block; } .site-header .c-sub-header-nav .entry-header { display: none; margin-bottom: 15px; } .site-header .c-sub-header-nav.sticky .entry-header { display: block; } .site-header .c-sub-header-nav.hide-sticky-menu.sticky .c-sub-nav_wrap { display: none; } .site-header .c-sub-header-nav.hide-sticky-menu .entry-header { margin-top: 15px; } @media (max-width: 480px) { .c-blog-post .entry-content .entry-content_wrap .reading-content { margin-left: -15px; margin-right: -15px; } } .settings-page table.list-bookmark > tbody tr td > div.mange-name:before { content: "Manga Name"; } .settings-page table.list-bookmark > tbody tr td > div.action:before { content: "Edit"; } .settings-page table.list-bookmark > tbody tr td > div.post-on:before { content: "Updated Time"; } .home .popular-slider.style-1 .c-blog__heading.style-2 h4 { color: #fff; }</style>
+        <script type="text/javascript" src="assets/includes/js/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/includes/js/jquery-migrate.min.js"></script>
+    </head>
+
+    <body
+        class="wp-manga-template-default single single-wp-manga postid-454 wp-embed-responsive theme-madara wp-manga-page manga-page woocommerce-no-js page header-style-1 sticky-enabled sticky-style-1 text-ui-dark minimal-reading-layout speaker-sized speaker-floating"
+    >
+        <div class="wrap">
+            <div class="body-wrap">
+                <header class="site-header">
+                    <div class="c-header__top">
+                        <ul class="search-main-menu">
+                            <li>
+                                <form id="blog-post-search" class="ajax" action="https://live.mangabooth.com/" method="get">
+                                    <input type="text" placeholder="Search..." name="s" value="" />
+                                    <input type="submit" value="Search" />
+                                    <div class="loader-inner line-scale">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                        <div class="main-navigation style-1">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="main-navigation_wrap">
+                                            <div class="wrap_branding">
+                                                <a class="logo" href="https://live.mangabooth.com/" title="Madara Demo">
+                                                    <img class="img-responsive" src="https://live.mangabooth.com/wp-content/themes/madara/images/logo.png" alt="Madara Demo" />
+                                                </a>
+                                            </div>
+
+                                            <div class="main-menu">
+                                                <ul class="nav navbar-nav main-navbar">
+                                                    <li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-27">
+                                                        <a href="/">HOME</a>
+                                                        <ul class="sub-menu">
+                                                            <li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="https://live.mangabooth.com/home-2/">HOME 2</a></li>
+                                                            <li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="https://live.mangabooth.com/home-3/">HOME 3</a></li>
+                                                            <li id="menu-item-341" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-341">
+                                                                <a href="https://live.mangabooth.com/home-4/">HOME 4 &#8211; REV SLIDER</a>
+                                                            </li>
+                                                            <li id="menu-item-402" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-402"><a href="https://live.mangabooth.com/home-dark/">HOME DARK</a></li>
+                                                            <li id="menu-item-1846" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1846">
+                                                                <a href="https://live.mangabooth.com/home-shortcode/">Home Shortcode</a>
+                                                            </li>
+                                                            <li id="menu-item-934" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-934">
+                                                                <a href="https://live.mangabooth.com/listing-big-thumbnail/">LISTING &#8211; BIG THUMBNAIL</a>
+                                                            </li>
+                                                            <li id="menu-item-852" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-852">
+                                                                <a href="https://live.mangabooth.com/listing-simple-list/">LISTING &#8211; SIMPLE LIST</a>
+                                                            </li>
+                                                            <li id="menu-item-500" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-500"><a href="https://live.mangabooth.com/home-single-manga/">SINGLE MANGA</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li id="menu-item-110" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current_page_ancestor menu-item-has-children menu-item-110">
+                                                        <a href="https://live.mangabooth.com/manga/">MANGA</a>
+                                                        <ul class="sub-menu">
+                                                            <li id="menu-item-410" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-410"><a href="/manga/?genres_collapse=on">ARCHIVES &#8211; SHOW GENRES</a></li>
+                                                            <li id="menu-item-409" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-409"><a href="/manga">ARCHIVES &#8211; HIDE GENRES</a></li>
+                                                            <li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-wp-manga menu-item-386">
+                                                                <a href="https://live.mangabooth.com/manga/hajime-boyfriend/">SINGLE MANGA</a>
+                                                            </li>
+                                                            <li id="menu-item-403" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-403">
+                                                                <a href="#">MANGA READING</a>
+                                                                <ul class="sub-menu">
+                                                                    <li id="menu-item-453" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-453"><a href="/manga/massa-consectetur-mattis/">VIDEO CHAPTER</a></li>
+                                                                    <li id="menu-item-457" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-457">
+                                                                        <a href="https://live.mangabooth.com/manga/manga-text-chapter/" aria-current="page">TEXT CHAPTER</a>
+                                                                    </li>
+                                                                    <li id="menu-item-404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-404">
+                                                                        <a href="/manga/ykataza-yin-wang-shynakimiz/?display=wp-manga&#038;chapter=chapter-1&#038;style=paged">LIGHT VERSION</a>
+                                                                    </li>
+                                                                    <li id="menu-item-405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-405">
+                                                                        <a href="/manga/dakimi-katawi-yakimimono-hajimazu-kyousou/?display=wp-manga&#038;chapter=chapter-1&#038;style=list&#038;body_schema=dark">DARK VERSION</a>
+                                                                    </li>
+                                                                    <li id="menu-item-346" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-346">
+                                                                        <a href="/manga/miharu-rokujou/?display=wp-manga&#038;chapter=chapter-1_1&#038;style=list">LIST STYLE</a>
+                                                                    </li>
+                                                                    <li id="menu-item-345" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-345">
+                                                                        <a href="/manga/miharu-rokujou/?display=wp-manga&#038;chapter=chapter-1_1&#038;style=paged">PAGED STYLE</a>
+                                                                    </li>
+                                                                    <li id="menu-item-413" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-413">
+                                                                        <a href="/manga/kahana-no-shou/?host=local&#038;display=wp-manga&#038;chapter=chapter-1&#038;style=paged">MULTI HOST</a>
+                                                                    </li>
+                                                                    <li id="menu-item-387" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-387">
+                                                                        <a href="/manga/hajime-boyfriend/?display=wp-manga&#038;chapter=chapter-1&#038;style=paged">HOST LOCAL</a>
+                                                                    </li>
+                                                                    <li id="menu-item-388" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-388">
+                                                                        <a href="/manga/nasama-okima/?display=wp-manga&#038;chapter=chapter-2&#038;style=paged">HOST AMAZON</a>
+                                                                    </li>
+                                                                    <li id="menu-item-407" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-407">
+                                                                        <a href="/manga/kagasarete-nairantou/?display=wp-manga&#038;chapter=chapter-1&#038;style=paged">HOST PICASA</a>
+                                                                    </li>
+                                                                    <li id="menu-item-408" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-408">
+                                                                        <a href="/manga/kahana-no-shou/?display=wp-manga&#038;chapter=chapter-1&#038;style=paged">HOST IMGUR</a>
+                                                                    </li>
+                                                                    <li id="menu-item-1850" class="menu-item menu-item-type-post_type menu-item-object-wp-manga menu-item-1850">
+                                                                        <a href="https://live.mangabooth.com/manga/kyojin-shingeki-no/">18+ MANGA</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li id="menu-item-347" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-347"><a href="/?s=&#038;post_type=wp-manga">MANGA ADVANCED SEARCH</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-23"><a href="https://live.mangabooth.com/blog/">BLOG</a></li>
+                                                    <li id="menu-item-75" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-75">
+                                                        <a href="https://live.mangabooth.com/about-us/">ABOUT US</a>
+                                                        <ul class="sub-menu">
+                                                            <li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="https://live.mangabooth.com/contact/">CONTACT US</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li id="menu-item-596" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-596">
+                                                        <a href="https://live.mangabooth.com/shop/"><i class="fas fa-shopping-bag"></i> SHOP</a>
+                                                        <ul class="sub-menu">
+                                                            <li id="menu-item-595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-595">
+                                                                <a href="https://live.mangabooth.com/cart/"><i class="fas fa-shopping-cart"></i> CART</a>
+                                                            </li>
+                                                            <li id="menu-item-594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-594">
+                                                                <a href="https://live.mangabooth.com/checkout/"><i class="far fa-credit-card"></i> CHECKOUT</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="search-navigation search-sidebar">
+                                                <div id="manga-search-3" class="widget col-12 col-md-12 default no-icon manga-widget widget-manga-search">
+                                                    <div class="widget__inner manga-widget widget-manga-search__inner c-widget-wrap">
+                                                        <div class="widget-content">
+                                                            <div class="search-navigation__wrap">
+                                                                <script>
+                                                                    jQuery(document).ready(function ($) {
+                                                                        if ($(".c-header__top .manga-search-form").length !== 0 && $(".c-header__top .manga-search-form.search-form").length !== 0) {
+                                                                            $("form#blog-post-search").append('<input type="hidden" name="post_type" value="wp-manga">');
+
+                                                                            $("form#blog-post-search").addClass("manga-search-form");
+
+                                                                            $('form#blog-post-search input[name="s"]').addClass("manga-search-field");
+
+                                                                            $("form.manga-search-form.ajax input.manga-search-field").each(function () {
+                                                                                var searchIcon = $(this).parent().children(".ion-ios-search-strong");
+
+                                                                                var append = $(this).parent();
+
+                                                                                $(this)
+                                                                                    .autocomplete({
+                                                                                        appendTo: append,
+                                                                                        source: function (request, resp) {
+                                                                                            $.ajax({
+                                                                                                url: manga.ajax_url,
+                                                                                                type: "POST",
+                                                                                                dataType: "json",
+                                                                                                data: {
+                                                                                                    action: "wp-manga-search-manga",
+                                                                                                    title: request.term,
+                                                                                                },
+                                                                                                success: function (data) {
+                                                                                                    resp(
+                                                                                                        $.map(data.data, function (item) {
+                                                                                                            if (true == data.success) {
+                                                                                                                return {
+                                                                                                                    label: item.title,
+                                                                                                                    value: item.title,
+                                                                                                                    url: item.url,
+                                                                                                                    type: item.type,
+                                                                                                                };
+                                                                                                            } else {
+                                                                                                                return {
+                                                                                                                    label: item.message,
+                                                                                                                    value: item.message,
+                                                                                                                    type: item.type,
+                                                                                                                    click: false,
+                                                                                                                };
+                                                                                                            }
+                                                                                                        })
+                                                                                                    );
+                                                                                                },
+                                                                                            });
+                                                                                        },
+                                                                                        select: function (e, ui) {
+                                                                                            if (ui.item.url) {
+                                                                                                window.location.href = ui.item.url;
+                                                                                            } else {
+                                                                                                if (ui.item.click) {
+                                                                                                    return true;
+                                                                                                } else {
+                                                                                                    return false;
+                                                                                                }
+                                                                                            }
+                                                                                        },
+                                                                                        open: function (e, ui) {
+                                                                                            var acData = $(this).data("uiAutocomplete");
+                                                                                            acData.menu.element
+                                                                                                .addClass("manga-autocomplete")
+                                                                                                .find("li div")
+                                                                                                .each(function () {
+                                                                                                    var $self = $(this),
+                                                                                                        keyword = $.trim(acData.term).split(" ").join("|");
+                                                                                                    $self.html($self.text().replace(new RegExp("(" + keyword + ")", "gi"), '<span class="manga-text-highlight">$1</span>'));
+                                                                                                });
+                                                                                        },
+                                                                                    })
+                                                                                    .autocomplete("instance")._renderItem = function (ul, item) {
+                                                                                    return $("<li class='search-item'>")
+                                                                                        .append("<div class='manga-type-" + item.type + "'>" + item.label + "</div>")
+                                                                                        .appendTo(ul);
+                                                                                };
+                                                                            });
+                                                                        }
+                                                                    });
+                                                                </script>
+                                                                <ul class="main-menu-search nav-menu">
+                                                                    <li class="menu-search">
+                                                                        <a href="javascript:;" class="open-search-main-menu"> <i class="icon ion-ios-search"></i> <i class="icon ion-android-close"></i> </a>
+                                                                        <ul class="search-main-menu">
+                                                                            <li>
+                                                                                <form class="manga-search-form search-form ajax" action="https://live.mangabooth.com/" method="get">
+                                                                                    <input class="manga-search-field" type="text" placeholder="Search..." name="s" value="" />
+                                                                                    <input type="hidden" name="post_type" value="wp-manga" /> <i class="icon ion-ios-search"></i>
+                                                                                    <div class="loader-inner ball-clip-rotate-multiple">
+                                                                                        <div></div>
+                                                                                        <div></div>
+                                                                                    </div>
+                                                                                    <input type="submit" value="Search" />
+                                                                                </form>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+
+                                                                <div class="link-adv-search">
+                                                                    <a href="https://live.mangabooth.com/?s=&#038;post_type=wp-manga">Advanced</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="c-togle__menu">
+                                                <button type="button" class="menu_icon__open"><span></span> <span></span> <span></span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mobile-menu menu-collapse off-canvas">
+                        <div class="close-nav">
+                            <button class="menu_icon__close"><span></span> <span></span></button>
+                        </div>
+
+                        <div class="c-modal_item">
+                            <!-- Button trigger modal -->
+                            <span class="c-modal_sign-in">
+                                <a href="#" data-toggle="modal" data-target="#form-login" class="btn-active-modal">Sign in</a>
+                            </span>
+
+                            <span class="c-modal_sign-up">
+                                <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal">Sign up</a>
+                            </span>
+                        </div>
+
+                        <nav class="off-menu">
+                            <ul id="menu-main-menu-1" class="nav navbar-nav main-navbar">
+                                <li id="nav-menu-item-27" class="main-menu-item menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children parent dropdown">
+                                    <a href="/" class="menu-link dropdown-toggle disabled main-menu-link" data-toggle="dropdown">HOME </a>
+                                    <ul class="dropdown-menu menu-depth-1">
+                                        <li id="nav-menu-item-25" class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="https://live.mangabooth.com/home-2/" class="menu-link sub-menu-link">HOME 2 </a>
+                                        </li>
+                                        <li id="nav-menu-item-24" class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="https://live.mangabooth.com/home-3/" class="menu-link sub-menu-link">HOME 3 </a>
+                                        </li>
+                                        <li id="nav-menu-item-341" class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="https://live.mangabooth.com/home-4/" class="menu-link sub-menu-link">HOME 4 &#8211; REV SLIDER </a>
+                                        </li>
+                                        <li id="nav-menu-item-402" class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="https://live.mangabooth.com/home-dark/" class="menu-link sub-menu-link">HOME DARK </a>
+                                        </li>
+                                        <li id="nav-menu-item-1846" class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="https://live.mangabooth.com/home-shortcode/" class="menu-link sub-menu-link">Home Shortcode </a>
+                                        </li>
+                                        <li id="nav-menu-item-934" class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="https://live.mangabooth.com/listing-big-thumbnail/" class="menu-link sub-menu-link">LISTING &#8211; BIG THUMBNAIL </a>
+                                        </li>
+                                        <li id="nav-menu-item-852" class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="https://live.mangabooth.com/listing-simple-list/" class="menu-link sub-menu-link">LISTING &#8211; SIMPLE LIST </a>
+                                        </li>
+                                        <li id="nav-menu-item-500" class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="https://live.mangabooth.com/home-single-manga/" class="menu-link sub-menu-link">SINGLE MANGA </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="nav-menu-item-110" class="main-menu-item menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current_page_ancestor menu-item-has-children parent dropdown">
+                                    <a href="https://live.mangabooth.com/manga/" class="menu-link dropdown-toggle disabled main-menu-link" data-toggle="dropdown">MANGA </a>
+                                    <ul class="dropdown-menu menu-depth-1">
+                                        <li id="nav-menu-item-410" class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-custom menu-item-object-custom">
+                                            <a href="/manga/?genres_collapse=on" class="menu-link sub-menu-link">ARCHIVES &#8211; SHOW GENRES </a>
+                                        </li>
+                                        <li id="nav-menu-item-409" class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-custom menu-item-object-custom">
+                                            <a href="/manga" class="menu-link sub-menu-link">ARCHIVES &#8211; HIDE GENRES </a>
+                                        </li>
+                                        <li id="nav-menu-item-386" class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-wp-manga">
+                                            <a href="https://live.mangabooth.com/manga/hajime-boyfriend/" class="menu-link sub-menu-link">SINGLE MANGA </a>
+                                        </li>
+                                        <li
+                                            id="nav-menu-item-403"
+                                            class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children parent dropdown-submenu"
+                                        >
+                                            <a href="#" class="menu-link sub-menu-link">MANGA READING </a>
+                                            <ul class="dropdown-menu menu-depth-2">
+                                                <li id="nav-menu-item-453" class="sub-menu-item menu-item-depth-2 menu-item menu-item-type-custom menu-item-object-custom">
+                                                    <a href="/manga/massa-consectetur-mattis/" class="menu-link sub-menu-link">VIDEO CHAPTER </a>
+                                                </li>
+                                                <li id="nav-menu-item-457" class="sub-menu-item menu-item-depth-2 menu-item menu-item-type-custom menu-item-object-custom current-menu-item">
+                                                    <a href="https://live.mangabooth.com/manga/manga-text-chapter/" class="menu-link sub-menu-link">TEXT CHAPTER </a>
+                                                </li>
+                                                <li id="nav-menu-item-404" class="sub-menu-item menu-item-depth-2 menu-item menu-item-type-custom menu-item-object-custom">
+                                                    <a href="/manga/ykataza-yin-wang-shynakimiz/?display=wp-manga&amp;chapter=chapter-1&amp;style=paged" class="menu-link sub-menu-link">LIGHT VERSION </a>
+                                                </li>
+                                                <li id="nav-menu-item-405" class="sub-menu-item menu-item-depth-2 menu-item menu-item-type-custom menu-item-object-custom">
+                                                    <a href="/manga/dakimi-katawi-yakimimono-hajimazu-kyousou/?display=wp-manga&amp;chapter=chapter-1&amp;style=list&amp;body_schema=dark" class="menu-link sub-menu-link">DARK VERSION </a>
+                                                </li>
+                                                <li id="nav-menu-item-346" class="sub-menu-item menu-item-depth-2 menu-item menu-item-type-custom menu-item-object-custom">
+                                                    <a href="/manga/miharu-rokujou/?display=wp-manga&amp;chapter=chapter-1_1&amp;style=list" class="menu-link sub-menu-link">LIST STYLE </a>
+                                                </li>
+                                                <li id="nav-menu-item-345" class="sub-menu-item menu-item-depth-2 menu-item menu-item-type-custom menu-item-object-custom">
+                                                    <a href="/manga/miharu-rokujou/?display=wp-manga&amp;chapter=chapter-1_1&amp;style=paged" class="menu-link sub-menu-link">PAGED STYLE </a>
+                                                </li>
+                                                <li id="nav-menu-item-413" class="sub-menu-item menu-item-depth-2 menu-item menu-item-type-custom menu-item-object-custom">
+                                                    <a href="/manga/kahana-no-shou/?host=local&amp;display=wp-manga&amp;chapter=chapter-1&amp;style=paged" class="menu-link sub-menu-link">MULTI HOST </a>
+                                                </li>
+                                                <li id="nav-menu-item-387" class="sub-menu-item menu-item-depth-2 menu-item menu-item-type-custom menu-item-object-custom">
+                                                    <a href="/manga/hajime-boyfriend/?display=wp-manga&amp;chapter=chapter-1&amp;style=paged" class="menu-link sub-menu-link">HOST LOCAL </a>
+                                                </li>
+                                                <li id="nav-menu-item-388" class="sub-menu-item menu-item-depth-2 menu-item menu-item-type-custom menu-item-object-custom">
+                                                    <a href="/manga/nasama-okima/?display=wp-manga&amp;chapter=chapter-2&amp;style=paged" class="menu-link sub-menu-link">HOST AMAZON </a>
+                                                </li>
+                                                <li id="nav-menu-item-407" class="sub-menu-item menu-item-depth-2 menu-item menu-item-type-custom menu-item-object-custom">
+                                                    <a href="/manga/kagasarete-nairantou/?display=wp-manga&amp;chapter=chapter-1&amp;style=paged" class="menu-link sub-menu-link">HOST PICASA </a>
+                                                </li>
+                                                <li id="nav-menu-item-408" class="sub-menu-item menu-item-depth-2 menu-item menu-item-type-custom menu-item-object-custom">
+                                                    <a href="/manga/kahana-no-shou/?display=wp-manga&amp;chapter=chapter-1&amp;style=paged" class="menu-link sub-menu-link">HOST IMGUR </a>
+                                                </li>
+                                                <li id="nav-menu-item-1850" class="sub-menu-item menu-item-depth-2 menu-item menu-item-type-post_type menu-item-object-wp-manga">
+                                                    <a href="https://live.mangabooth.com/manga/kyojin-shingeki-no/" class="menu-link sub-menu-link">18+ MANGA </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li id="nav-menu-item-347" class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-custom menu-item-object-custom">
+                                            <a href="/?s=&amp;post_type=wp-manga" class="menu-link sub-menu-link">MANGA ADVANCED SEARCH </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="nav-menu-item-23" class="main-menu-item menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page current_page_parent">
+                                    <a href="https://live.mangabooth.com/blog/" class="menu-link main-menu-link">BLOG </a>
+                                </li>
+                                <li id="nav-menu-item-75" class="main-menu-item menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children parent dropdown">
+                                    <a href="https://live.mangabooth.com/about-us/" class="menu-link dropdown-toggle disabled main-menu-link" data-toggle="dropdown">ABOUT US </a>
+                                    <ul class="dropdown-menu menu-depth-1">
+                                        <li id="nav-menu-item-22" class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="https://live.mangabooth.com/contact/" class="menu-link sub-menu-link">CONTACT US </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li id="nav-menu-item-596" class="main-menu-item menu-item-depth-0 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children parent dropdown">
+                                    <a href="https://live.mangabooth.com/shop/" class="menu-link dropdown-toggle disabled main-menu-link" data-toggle="dropdown"><i class="fas fa-shopping-bag"></i> SHOP </a>
+                                    <ul class="dropdown-menu menu-depth-1">
+                                        <li id="nav-menu-item-595" class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="https://live.mangabooth.com/cart/" class="menu-link sub-menu-link"><i class="fas fa-shopping-cart"></i> CART </a>
+                                        </li>
+                                        <li id="nav-menu-item-594" class="sub-menu-item menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page">
+                                            <a href="https://live.mangabooth.com/checkout/" class="menu-link sub-menu-link"><i class="far fa-credit-card"></i> CHECKOUT </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="center">
+                            <div class="section_adult on">
+                                <a href="https://live.mangabooth.com/" target="_self" title="Family Safe">
+                                    <span class="dot"><!-- --></span><span>Family Safe</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-sub-header-nav with-border">
+                        <div class="container">
+                            <div class="c-sub-nav_wrap">
+                                <div class="sub-nav_content">
+                                    <div class="section_adult on">
+                                        <a href="https://live.mangabooth.com/" target="_self" title="Family Safe">
+                                            <span class="dot"><!-- --></span><span>Family Safe</span>
+                                        </a>
+                                    </div>
+
+                                    <ul class="sub-nav_list list-inline second-menu">
+                                        <li id="menu-item-54" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-54"><a href="https://live.mangabooth.com/manga-genre/romance/">Romance</a></li>
+                                        <li id="menu-item-32" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-32"><a href="https://live.mangabooth.com/manga-genre/comedy/">Comedy</a></li>
+                                        <li id="menu-item-58" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-58"><a href="https://live.mangabooth.com/manga-genre/shoujo/">Shoujo</a></li>
+                                        <li id="menu-item-36" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-36"><a href="https://live.mangabooth.com/manga-genre/drama/">Drama</a></li>
+                                        <li id="menu-item-55" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-55"><a href="https://live.mangabooth.com/manga-genre/school-life/">School Life</a></li>
+                                        <li id="menu-item-72" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children parent menu-item-72">
+                                            <a href="#">MORE</a>
+                                            <ul class="sub-menu">
+                                                <li id="menu-item-29" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-29"><a href="https://live.mangabooth.com/manga-genre/adult/">Adult</a></li>
+                                                <li id="menu-item-28" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre current-wp-manga-ancestor current-menu-parent current-wp-manga-parent menu-item-28">
+                                                    <a href="https://live.mangabooth.com/manga-genre/action/">Action</a>
+                                                </li>
+                                                <li id="menu-item-60" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-60"><a href="https://live.mangabooth.com/manga-genre/shounen/">Shounen</a></li>
+                                                <li id="menu-item-30" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre current-wp-manga-ancestor current-menu-parent current-wp-manga-parent menu-item-30">
+                                                    <a href="https://live.mangabooth.com/manga-genre/adventure/">Adventure</a>
+                                                </li>
+                                                <li id="menu-item-31" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-31"><a href="https://live.mangabooth.com/manga-genre/anime/">Anime</a></li>
+                                                <li id="menu-item-33" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-33"><a href="https://live.mangabooth.com/manga-genre/comic/">Comic</a></li>
+                                                <li id="menu-item-34" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-34"><a href="https://live.mangabooth.com/manga-genre/cooking/">Cooking</a></li>
+                                                <li id="menu-item-35" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-35"><a href="https://live.mangabooth.com/manga-genre/doujinshi/">Doujinshi</a></li>
+                                                <li id="menu-item-37" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-37"><a href="https://live.mangabooth.com/manga-genre/ecchi/">Ecchi</a></li>
+                                                <li id="menu-item-38" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-38"><a href="https://live.mangabooth.com/manga-genre/fantasy/">Fantasy</a></li>
+                                                <li id="menu-item-39" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-39">
+                                                    <a href="https://live.mangabooth.com/manga-genre/gender-bender/">Gender Bender</a>
+                                                </li>
+                                                <li id="menu-item-40" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-40"><a href="https://live.mangabooth.com/manga-genre/harem/">Harem</a></li>
+                                                <li id="menu-item-41" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-41"><a href="https://live.mangabooth.com/manga-genre/historical/">Historical</a></li>
+                                                <li id="menu-item-42" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-42"><a href="https://live.mangabooth.com/manga-genre/horror/">Horror</a></li>
+                                                <li id="menu-item-43" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-43"><a href="https://live.mangabooth.com/manga-genre/josei/">Josei</a></li>
+                                                <li id="menu-item-44" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-44"><a href="https://live.mangabooth.com/manga-genre/live-action/">Live action</a></li>
+                                                <li id="menu-item-45" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-45"><a href="https://live.mangabooth.com/manga-genre/manga/">Manga</a></li>
+                                                <li id="menu-item-46" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-46"><a href="https://live.mangabooth.com/manga-genre/manhua/">Manhua</a></li>
+                                                <li id="menu-item-47" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-47"><a href="https://live.mangabooth.com/manga-genre/manhwa/">Manhwa</a></li>
+                                                <li id="menu-item-48" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-48">
+                                                    <a href="https://live.mangabooth.com/manga-genre/martial-arts/">Martial Arts</a>
+                                                </li>
+                                                <li id="menu-item-49" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-49"><a href="https://live.mangabooth.com/manga-genre/mature/">Mature</a></li>
+                                                <li id="menu-item-50" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-50"><a href="https://live.mangabooth.com/manga-genre/mecha/">Mecha</a></li>
+                                                <li id="menu-item-51" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-51"><a href="https://live.mangabooth.com/manga-genre/mystery/">Mystery</a></li>
+                                                <li id="menu-item-52" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-52"><a href="https://live.mangabooth.com/manga-genre/one-shot/">One shot</a></li>
+                                                <li id="menu-item-53" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-53">
+                                                    <a href="https://live.mangabooth.com/manga-genre/psychological/">Psychological</a>
+                                                </li>
+                                                <li id="menu-item-56" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-56"><a href="https://live.mangabooth.com/manga-genre/sci-fi/">Sci-fi</a></li>
+                                                <li id="menu-item-57" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-57"><a href="https://live.mangabooth.com/manga-genre/seinen/">Seinen</a></li>
+                                                <li id="menu-item-59" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-59"><a href="https://live.mangabooth.com/manga-genre/shoujo-ai/">Shoujo Ai</a></li>
+                                                <li id="menu-item-61" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-61"><a href="https://live.mangabooth.com/manga-genre/shounen-ai/">Shounen Ai</a></li>
+                                                <li id="menu-item-62" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-62">
+                                                    <a href="https://live.mangabooth.com/manga-genre/slice-of-life/">Slice of Life</a>
+                                                </li>
+                                                <li id="menu-item-63" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-63"><a href="https://live.mangabooth.com/manga-genre/smut/">Smut</a></li>
+                                                <li id="menu-item-64" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-64"><a href="https://live.mangabooth.com/manga-genre/soft-yaoi/">Soft Yaoi</a></li>
+                                                <li id="menu-item-65" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-65"><a href="https://live.mangabooth.com/manga-genre/soft-yuri/">Soft Yuri</a></li>
+                                                <li id="menu-item-66" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-66"><a href="https://live.mangabooth.com/manga-genre/sports/">Sports</a></li>
+                                                <li id="menu-item-68" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-68"><a href="https://live.mangabooth.com/manga-genre/tragedy/">Tragedy</a></li>
+                                                <li id="menu-item-67" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-67">
+                                                    <a href="https://live.mangabooth.com/manga-genre/supernatural/">Supernatural</a>
+                                                </li>
+                                                <li id="menu-item-69" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-69"><a href="https://live.mangabooth.com/manga-genre/webtoon/">Webtoon</a></li>
+                                                <li id="menu-item-70" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-70"><a href="https://live.mangabooth.com/manga-genre/yaoi/">Yaoi</a></li>
+                                                <li id="menu-item-71" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-71"><a href="https://live.mangabooth.com/manga-genre/yuri/">Yuri</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <i class="mobile-icon icon ion-md-more"></i>
+                                    </ul>
+                                </div>
+
+                                <div class="c-modal_item">
+                                    <!-- Button trigger modal -->
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login" class="btn-active-modal">Sign in</a>
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal">Sign up</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="site-content">
+                    <div
+                        class="post-454 wp-manga type-wp-manga status-publish has-post-thumbnail hentry wp-manga-tag-achitaka wp-manga-tag-action wp-manga-release-92 wp-manga-author-achitaka wp-manga-author-akira-amano wp-manga-artist-ichita-ortiki wp-manga-artist-inmoki wp-manga-genre-action wp-manga-genre-adventure"
+                    >
+                        <div class="profile-manga summary-layout-1" style="background-image: url(https://live.mangabooth.com/wp-content/themes/madara/images/bg-search.jpg);">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-12">
+                                        <div class="c-breadcrumb-wrapper">
+                                            <div class="c-breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li>
+                                                        <a href="https://live.mangabooth.com/"> Home </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="https://live.mangabooth.com/manga-genre/action/"> Action </a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a href="https://live.mangabooth.com/manga/manga-text-chapter/"> Manga Text Chapter </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+
+                                        <div class="post-title">
+                                            <span class="manga-title-badges new">NEW</span>
+                                            <h1>
+                                                Manga Text Chapter
+                                            </h1>
+                                        </div>
+                                        <div class="tab-summary">
+                                            <div class="summary_image">
+                                                <a href="https://live.mangabooth.com/manga/manga-text-chapter/">
+                                                    <img
+                                                        width="193"
+                                                        height="278"
+                                                        data-src="https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-550105-193x278.jpg"
+                                                        data-srcset="https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-550105-193x278.jpg 193w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-550105-125x180.jpg 125w"
+                                                        data-sizes="(max-width: 193px) 100vw, 193px"
+                                                        class="img-responsive lazyload effect-fade"
+                                                        src="https://live.mangabooth.com/wp-content/themes/madara/images/dflazy.jpg"
+                                                        style="padding-top: 278px;"
+                                                        alt="wallhaven-550105"
+                                                    />
+                                                </a>
+                                            </div>
+                                            <div class="summary_content_wrap">
+                                                <div class="summary_content">
+                                                    <div class="post-content"
+                                                        <div class="post-rating">
+                                                            <div class="post-total-rating allow_vote">
+                                                                <i class="ion-ios-star ratings_stars rating_current"></i><i class="ion-ios-star ratings_stars rating_current"></i><i class="ion-ios-star ratings_stars rating_current"></i>
+                                                                <i class="ion-ios-star ratings_stars rating_current"></i><i class="ion-ios-star-outline ratings_stars"></i><span class="score font-meta total_votes">4.2</span>
+                                                            </div>
+                                                            <div class="user-rating allow_vote">
+                                                                <i class="ion-ios-star-outline ratings_stars"></i><i class="ion-ios-star-outline ratings_stars"></i><i class="ion-ios-star-outline ratings_stars"></i>
+                                                                <i class="ion-ios-star-outline ratings_stars"></i><i class="ion-ios-star-outline ratings_stars"></i><span class="score font-meta total_votes">Your Rating</span>
+                                                            </div>
+                                                            <input type="hidden" class="rating-post-id" value="454" />
+                                                        </div>
+
+                                                        <div class="post-content_item">
+                                                            <div class="summary-heading">
+                                                                <h5>Rating</h5>
+                                                            </div>
+                                                            <div class="summary-content vote-details" vocab="https://schema.org/" typeof="AggregateRating">
+                                                                <span property="itemReviewed" typeof="Book"><span class="rate-title" property="name" title="Manga Text Chapter">Manga Text Chapter</span></span>
+                                                                <span>
+                                                                    <span> Average <span property="ratingValue" id="averagerate"> 4.2</span> / <span property="bestRating">5</span> </span>
+                                                                </span>
+                                                                out of <span property="ratingCount" id="countrate">127</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post-content_item">
+                                                            <div class="summary-heading">
+                                                                <h5>
+                                                                    Rank
+                                                                </h5>
+                                                            </div>
+                                                            <div class="summary-content">
+                                                                1st, it has 1.4K monthly views
+                                                            </div>
+                                                        </div>
+                                                        <div class="post-content_item">
+                                                            <div class="summary-heading">
+                                                                <h5>
+                                                                    Author(s)
+                                                                </h5>
+                                                            </div>
+                                                            <div class="summary-content">
+                                                                <div class="author-content">
+                                                                    <a href="https://live.mangabooth.com/manga-author/achitaka/" rel="tag">Achitaka</a>,
+                                                                    <a href="https://live.mangabooth.com/manga-author/akira-amano/" rel="tag">Akira AMANO</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post-content_item">
+                                                            <div class="summary-heading">
+                                                                <h5>
+                                                                    Artist(s)
+                                                                </h5>
+                                                            </div>
+                                                            <div class="summary-content">
+                                                                <div class="artist-content">
+                                                                    <a href="https://live.mangabooth.com/manga-artist/ichita-ortiki/" rel="tag">Ichita Ortiki</a>,
+                                                                    <a href="https://live.mangabooth.com/manga-artist/inmoki/" rel="tag">Inmoki</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="post-content_item">
+                                                            <div class="summary-heading">
+                                                                <h5>
+                                                                    Genre(s)
+                                                                </h5>
+                                                            </div>
+                                                            <div class="summary-content">
+                                                                <div class="genres-content">
+                                                                    <a href="https://live.mangabooth.com/manga-genre/action/" rel="tag">Action</a>, <a href="https://live.mangabooth.com/manga-genre/adventure/" rel="tag">Adventure</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="post-content_item">
+                                                            <div class="summary-heading">
+                                                                <h5>
+                                                                    Tag(s)
+                                                                </h5>
+                                                            </div>
+                                                            <div class="summary-content">
+                                                                <div class="tags-content">
+                                                                    <a href="https://live.mangabooth.com/manga-tag/achitaka/" rel="tag">Achitaka</a>, <a href="https://live.mangabooth.com/manga-tag/action/" rel="tag">Action</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-status">
+                                                        <div class="post-content_item">
+                                                            <div class="summary-heading">
+                                                                <h5>
+                                                                    Release
+                                                                </h5>
+                                                            </div>
+                                                            <div class="summary-content">
+                                                                <a href="https://live.mangabooth.com/manga-release/2015/" rel="tag">2015</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="post-content_item">
+                                                            <div class="summary-heading">
+                                                                <h5>
+                                                                    Status
+                                                                </h5>
+                                                            </div>
+                                                            <div class="summary-content">
+                                                                OnGoing
+                                                            </div>
+                                                        </div>
+                                                        <div class="manga-action">
+                                                            <div class="count-comment">
+                                                                <div class="action_icon">
+                                                                    <a href="#manga-discussion"><i class="icon ion-md-chatbubbles"></i></a>
+                                                                </div>
+                                                                <div class="action_detail">
+                                                                    <span class="disqus-comment-count" data-disqus-url="https://live.mangabooth.com/manga/manga-text-chapter/">Comments</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="add-bookmark">
+                                                                <div class="action_icon">
+                                                                    <script type="text/javascript">
+                                                                        var requireLogin2BookMark = true;
+                                                                    </script>
+                                                                    <a href="#" class="wp-manga-action-button" data-action="bookmark" data-post="454" data-chapter="" data-page="1" title="Bookmark"><i class="icon ion-ios-bookmark"></i></a>
+                                                                </div>
+                                                                <div class="action_detail"><span>9 Users bookmarked This</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="init-links" class="nav-links">
+                                                        <a href="#" id="btn-read-last" class="c-btn c-btn_style-1"> Read First</a>
+                                                        <a href="#" id="btn-read-first" class="c-btn c-btn_style-1">Read Last</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="c-page-content style-1">
+                            <div class="content-area">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="main-col col-md-12 col-sm-12 sidebar-hidden">
+                                            <!-- container & no-sidebar-->
+                                            <div class="main-col-inner">
+                                                <div class="c-page">
+                                                    <!-- <div class="c-page__inner"> -->
+                                                    <div class="c-page__content">
+                                                        <div class="c-blog__heading style-2 font-heading">
+                                                            <h2 class="h4">
+                                                                <i class="icon ion-ios-star"></i>
+                                                                Summary
+                                                            </h2>
+                                                        </div>
+
+                                                        <div class="description-summary">
+                                                            <div class="summary__content show-more">
+                                                                <div class="mdp-speaker-wrapper">
+                                                                    <div class="mdp-speaker-box before-content speaker-round" style="background: rgba(2, 83, 238, 1);">
+                                                                        <div>
+                                                                            <!--[if lt IE 9]>
+                                                                                <script>
+                                                                                    document.createElement("audio");
+                                                                                </script>
+                                                                            <![endif]-->
+                                                                            <audio class="wp-audio-shortcode" id="audio-454-1" preload="metadata" style="width: 100%;" controls="controls">
+                                                                                <source type="audio/mpeg" src="https://live.mangabooth.com/wp-content/uploads/speaker/post-454.mp3?cb=1625478132.mp3&#038;_=1" />
+                                                                                <a href="https://live.mangabooth.com/wp-content/uploads/speaker/post-454.mp3?cb=1625478132.mp3">
+                                                                                    https://live.mangabooth.com/wp-content/uploads/speaker/post-454.mp3?cb=1625478132.mp3
+                                                                                </a>
+                                                                            </audio>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <p>
+                                                                    A land where the strong makes the rules and weak has to obey. A land filled with alluring treasures and beauty yet also filled with unforeseen danger. Xikajio Yan, who has
+                                                                    shown talents none had seen in decades, suddenly three years ago lost everything, his powers, his reputation, and his promise to his mother.
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="c-content-readmore">
+                                                                <span class="btn btn-link content-readmore"> Show more </span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="c-blog__heading style-2 font-heading">
+                                                            <h2 class="h4">
+                                                                <i class="icon ion-ios-star"></i>
+                                                                LATEST MANGA RELEASES
+                                                            </h2>
+                                                            <a href="#" title="Change Order" class="btn-reverse-order"><i class="icon ion-md-swap"></i></a>
+                                                        </div>
+                                                        <div class="page-content-listing single-page">
+                                                            <div class="listing-chapters_wrap cols-1 show-more">
+                                                                <ul class="main version-chap no-volumn">
+                                                                    <li class="wp-manga-chapter">
+                                                                        <a href="https://live.mangabooth.com/manga/manga-text-chapter/chapter-3/"> Chapter 3 </a>
+
+                                                                        <span class="chapter-release-date"> <i>January 12, 2018</i> </span>
+                                                                    </li>
+
+                                                                    <li class="wp-manga-chapter">
+                                                                        <a href="https://live.mangabooth.com/manga/manga-text-chapter/chapter-2/"> Chapter 2 </a>
+
+                                                                        <span class="chapter-release-date"> <i>January 12, 2018</i> </span>
+                                                                    </li>
+
+                                                                    <li class="wp-manga-chapter">
+                                                                        <a href="https://live.mangabooth.com/manga/manga-text-chapter/chapter-1/"> Chapter 1 </a>
+
+                                                                        <span class="chapter-release-date"> <i>January 12, 2018</i> </span>
+                                                                    </li>
+                                                                </ul>
+
+                                                                <div class="c-chapter-readmore">
+                                                                    <span class="btn btn-link chapter-readmore"> Show more </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- </div> -->
+                                                </div>
+
+                                                <!-- comments-area -->
+
+                                                <div id="manga-discussion" class="c-blog__heading style-2 font-heading">
+                                                    <i class="ion-ios-star"></i>
+                                                    <h4>MANGA DISCUSSION</h4>
+                                                </div>
+                                                <div class="manga-discussion wrapper">
+                                                    <div class="hr mv40"></div>
+
+                                                    <div id="madara-comments" class="comments-area">
+                                                        <div id="respond" class="comment-respond">
+                                                            <h4 id="reply-title" class="comment-reply-title">
+                                                                Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/manga/manga-text-chapter/#respond" style="display: none;">Cancel reply</a></small>
+                                                            </h4>
+                                                            <form action="https://live.mangabooth.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+                                                                <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p>
+                                                                <p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="Comment"></textarea></p>
+                                                                <p class="comment-form-author">
+                                                                    <label for="author">Name</label> <span class="required">*</span><input id="author" name="author" type="text" placeholder="Name" value="" size="30" aria-required="true" />
+                                                                </p>
+                                                                <p class="comment-form-email">
+                                                                    <label for="email">Email</label> <span class="required">*</span><input id="email" name="email" type="text" placeholder="Email" value="" size="30" aria-required="true" />
+                                                                </p>
+                                                                <p class="comment-form-url"><label for="url">Website</label><input id="url" name="url" type="text" placeholder="Website" value="" size="30" /></p>
+                                                                <p class="comment-form-cookies-consent">
+                                                                    <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" />
+                                                                    <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label>
+                                                                </p>
+                                                                <p class="form-submit">
+                                                                    <input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type="hidden" name="comment_post_ID" value="454" id="comment_post_ID" />
+                                                                    <input type="hidden" name="comment_parent" id="comment_parent" value="0" />
+                                                                </p>
+                                                                <input type="hidden" name="wp_manga_chapter_id" value="0" />
+                                                            </form>
+                                                        </div>
+                                                        <!-- #respond -->
+                                                    </div>
+                                                    <!-- #comments -->
+                                                </div>
+
+                                                <!-- END comments-area -->
+
+                                                <div class="row c-row related-manga">
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                                                        <div class="c-blog__heading style-2 font-heading">
+                                                            <h4>
+                                                                <i class="icon ion-ios-star"></i>
+                                                                YOU MAY ALSO LIKE
+                                                            </h4>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 col-sm-6 col-md-3">
+                                                        <div class="related-reading-wrap related-style-2">
+                                                            <div class="related-reading-img widget-thumbnail c-image-hover">
+                                                                <a title="The Gami Shiobita" href="https://live.mangabooth.com/manga/the-gami-shiobita/">
+                                                                    <img
+                                                                        width="350"
+                                                                        height="219"
+                                                                        data-src="https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-516736.png"
+                                                                        data-srcset="https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-516736.png 1920w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-516736-600x375.png 600w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-516736-300x188.png 300w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-516736-1024x640.png 1024w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-516736-768x480.png 768w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-516736-1536x960.png 1536w"
+                                                                        data-sizes="(max-width: 350px) 100vw, 350px"
+                                                                        class="img-responsive lazyload effect-fade"
+                                                                        src="https://live.mangabooth.com/wp-content/themes/madara/images/dflazy.jpg"
+                                                                        style="padding-top: 62.571428571429%;"
+                                                                        alt="wallhaven-516736"
+                                                                    />
+                                                                </a>
+                                                            </div>
+                                                            <div class="related-reading-content">
+                                                                <h5 class="widget-title">
+                                                                    <a href="https://live.mangabooth.com/manga/the-gami-shiobita/" title="The Gami Shiobita"> The Gami Shiobita </a>
+                                                                </h5>
+                                                            </div>
+                                                            <div class="post-on font-meta">
+                                                                <span> October 11, 2017 </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 col-sm-6 col-md-3">
+                                                        <div class="related-reading-wrap related-style-2">
+                                                            <div class="related-reading-img widget-thumbnail c-image-hover">
+                                                                <a title="Lahasha Ya Shyng Bukitaza" href="https://live.mangabooth.com/manga/lahasha-ya-shyng-bukitaza/">
+                                                                    <img
+                                                                        width="350"
+                                                                        height="197"
+                                                                        data-src="https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-539934.jpg"
+                                                                        data-srcset="https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-539934.jpg 1920w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-539934-600x338.jpg 600w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-539934-300x169.jpg 300w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-539934-1024x576.jpg 1024w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-539934-768x432.jpg 768w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-539934-1536x864.jpg 1536w"
+                                                                        data-sizes="(max-width: 350px) 100vw, 350px"
+                                                                        class="img-responsive lazyload effect-fade"
+                                                                        src="https://live.mangabooth.com/wp-content/themes/madara/images/dflazy.jpg"
+                                                                        style="padding-top: 56.285714285714%;"
+                                                                        alt="wallhaven-539934"
+                                                                    />
+                                                                </a>
+                                                            </div>
+                                                            <div class="related-reading-content">
+                                                                <h5 class="widget-title">
+                                                                    <a href="https://live.mangabooth.com/manga/lahasha-ya-shyng-bukitaza/" title="Lahasha Ya Shyng Bukitaza"> Lahasha Ya Shyng Bukitaza </a>
+                                                                </h5>
+                                                            </div>
+                                                            <div class="post-on font-meta">
+                                                                <span> October 11, 2017 </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 col-sm-6 col-md-3">
+                                                        <div class="related-reading-wrap related-style-2">
+                                                            <div class="related-reading-img widget-thumbnail c-image-hover">
+                                                                <a title="Miharu Rokujou" href="https://live.mangabooth.com/manga/miharu-rokujou/">
+                                                                    <img
+                                                                        width="350"
+                                                                        height="197"
+                                                                        data-src="https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-529968.jpg"
+                                                                        data-srcset="https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-529968.jpg 1920w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-529968-600x338.jpg 600w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-529968-300x169.jpg 300w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-529968-1024x576.jpg 1024w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-529968-768x432.jpg 768w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-529968-1536x864.jpg 1536w"
+                                                                        data-sizes="(max-width: 350px) 100vw, 350px"
+                                                                        class="img-responsive lazyload effect-fade"
+                                                                        src="https://live.mangabooth.com/wp-content/themes/madara/images/dflazy.jpg"
+                                                                        style="padding-top: 56.285714285714%;"
+                                                                        alt="wallhaven-529968"
+                                                                    />
+                                                                </a>
+                                                            </div>
+                                                            <div class="related-reading-content">
+                                                                <h5 class="widget-title">
+                                                                    <a href="https://live.mangabooth.com/manga/miharu-rokujou/" title="Miharu Rokujou"> Miharu Rokujou </a>
+                                                                </h5>
+                                                            </div>
+                                                            <div class="post-on font-meta">
+                                                                <span> October 12, 2017 </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 col-sm-6 col-md-3">
+                                                        <div class="related-reading-wrap related-style-2">
+                                                            <div class="related-reading-img widget-thumbnail c-image-hover">
+                                                                <a title="Monatari Takawoa Yangku" href="https://live.mangabooth.com/manga/monatari-takawoa-yangku/">
+                                                                    <img
+                                                                        width="350"
+                                                                        height="197"
+                                                                        data-src="https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-530467.png"
+                                                                        data-srcset="https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-530467.png 1920w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-530467-600x338.png 600w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-530467-300x169.png 300w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-530467-1024x576.png 1024w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-530467-768x432.png 768w, https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-530467-1536x864.png 1536w"
+                                                                        data-sizes="(max-width: 350px) 100vw, 350px"
+                                                                        class="img-responsive lazyload effect-fade"
+                                                                        src="https://live.mangabooth.com/wp-content/themes/madara/images/dflazy.jpg"
+                                                                        style="padding-top: 56.285714285714%;"
+                                                                        alt="wallhaven-530467"
+                                                                    />
+                                                                </a>
+                                                            </div>
+                                                            <div class="related-reading-content">
+                                                                <h5 class="widget-title">
+                                                                    <a href="https://live.mangabooth.com/manga/monatari-takawoa-yangku/" title="Monatari Takawoa Yangku"> Monatari Takawoa Yangku </a>
+                                                                </h5>
+                                                            </div>
+                                                            <div class="post-on font-meta">
+                                                                <span> October 13, 2017 </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="site-content"> -->
+
+                <footer class="site-footer">
+                    <div class="ad c-ads custom-code footer-ads col-md-12"><img width="730" height="92" src="https://live.mangabooth.com/wp-content/uploads/2017/10/ads-1.jpg" alt="Madara Ads Footer" /></div>
+                    <div class="top-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="wrap_social_account">
+                                        <ul class="list-inline social_account__item">
+                                            <li>
+                                                <a class="social-icons" target="_blank" rel="noopener" href="#" title="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="social-icons" target="_blank" rel="noopener" href="#" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="social-icons" target="_blank" rel="noopener" href="#" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="social-icons" target="_blank" rel="noopener" href="#" title="Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="social-icons" target="_blank" rel="noopener" href="#" title="Pinterest"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="social-icons" target="_blank" rel="noopener" href="#" title="Youtube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="social-icons" target="_blank" rel="noopener" href="#" title="Flickr"><i class="fab fa-flickr" aria-hidden="true"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bottom-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="nav-footer">
+                                        <ul class="list-inline font-nav">
+                                            <li id="menu-item-76" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-76"><a href="/">HOME</a></li>
+                                            <li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-79"><a href="https://live.mangabooth.com/blog/">BLOG</a></li>
+                                            <li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="https://live.mangabooth.com/contact/">CONTACT US</a></li>
+                                            <li id="menu-item-77" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="https://live.mangabooth.com/about-us/">ABOUT US</a></li>
+                                            <li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80"><a href="#">COOKIE POLICY</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="copyright">
+                                        <p>&copy; 2021 Madara Inc. All rights reserved</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <div class="ad c-ads custom-code wall-ads-control wall-ads-left"><img width="200" height="650" src="https://live.mangabooth.com/wp-content/uploads/2018/02/side-ad-01.jpg" alt="Madara Ads Wall Ads Left" /></div>
+                <div class="ad c-ads custom-code wall-ads-control wall-ads-right"><img width="200" height="650" src="https://live.mangabooth.com/wp-content/uploads/2018/02/side-ad-02.jpg" alt="Madara Ads Wall Ads Right" /></div>
+                <div id="hover-infor"></div>
+            </div>
+            <!-- class="wrap" -->
+        </div>
+        <!-- class="body-wrap" -->
+
+        <!-- Modal -->
+        <div class="wp-manga-section">
+            <input type="hidden" name="bookmarking" value="0" />
+            <div class="modal fade" id="form-login" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="login" class="login">
+                                <h3>
+                                    <a href="https://live.mangabooth.com/" title="Madara Demo" tabindex="-1">Sign in</a>
+                                </h3>
+                                <p class="message login"></p>
+                                <meta name="robots" content="max-image-preview:large" />
+                                <link rel="dns-prefetch" href="//s.w.org" />
+                                <script type="text/javascript" src="https://live.mangabooth.com/wp-includes/js/wp-embed.min.js?ver=5.8.1" id="wp-embed-js"></script>
+                                <link rel="stylesheet" id="mediaelement-css" href="https://live.mangabooth.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css" type="text/css" media="all" />
+                                <link rel="stylesheet" id="wp-mediaelement-css" href="https://live.mangabooth.com/wp-includes/js/mediaelement/wp-mediaelement.min.css" type="text/css" media="all" />
+                                <form name="loginform" id="loginform" method="post">
+                                    <p>
+                                        <label>
+                                            Username or Email Address * <br />
+                                            <input type="text" name="log" class="input user_login" value="" size="20" />
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            Password * <br />
+                                            <input type="password" autocomplete="" name="pwd" class="input user_pass" value="" size="20" />
+                                        </label>
+                                    </p>
+                                    <p></p>
+                                    <p class="forgetmenot">
+                                        <label> <input name="rememberme" type="checkbox" id="rememberme" value="forever" />Remember Me </label>
+                                    </p>
+                                    <p class="submit">
+                                        <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Log In" /> <input type="hidden" name="redirect_to" value="https://live.mangabooth.com/wp-admin/" />
+                                        <input type="hidden" name="testcookie" value="1" />
+                                    </p>
+                                </form>
+                                <p class="nav">
+                                    <a href="javascript:avoid(0)" class="to-reset">Lost your password?</a>
+                                </p>
+                                <p class="backtoblog">
+                                    <a href="javascript:void(0)">&larr; Back to Madara Demo</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="form-sign-up" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="sign-up" class="login">
+                                <h3>
+                                    <a href="https://live.mangabooth.com/" title="Madara Demo" tabindex="-1">Sign Up</a>
+                                </h3>
+                                <p class="message register">Register For This Site.</p>
+                                <form name="registerform" id="registerform" novalidate="novalidate">
+                                    <p>
+                                        <label>
+                                            Username * <br />
+                                            <input type="text" name="user_sign-up" class="input user_login" value="" size="20" />
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            Email Address * <br />
+                                            <input type="email" name="email_sign-up" class="input user_email" value="" size="20" />
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            Password *<br />
+                                            <input type="password" name="pass_sign-up" autocomplete="" class="input user_pass" value="" size="25" />
+                                        </label>
+                                    </p>
+                                    <p></p>
+
+                                    <input type="hidden" name="redirect_to" value="" />
+                                    <p class="submit">
+                                        <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Register" />
+                                    </p>
+                                </form>
+                                <p class="nav">
+                                    <a href="javascript:void(0)" class="to-login">Log in</a>
+                                    |
+                                    <a href="javascript:void(0)" class="to-reset">Lost your password?</a>
+                                </p>
+                                <p class="backtoblog">
+                                    <a href="javascript:void(0)">&larr; Back to Madara Demo</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="form-reset" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="reset" class="login">
+                                <h3>
+                                    <a href="javascript:void(0)" class="to-reset">Lost your password?</a>
+                                </h3>
+                                <p class="message reset">Please enter your username or email address. You will receive a link to create a new password via email.</p>
+                                <form name="resetform" id="resetform" method="post">
+                                    <p>
+                                        <label>
+                                            Username or Email Address <br />
+                                            <input type="text" name="user_reset" id="user_reset" class="input" value="" size="20" />
+                                        </label>
+                                    </p>
+                                    <p class="submit">
+                                        <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Get New Password" />
+                                        <input type="hidden" name="testcookie" value="1" />
+                                    </p>
+                                </form>
+                                <p>
+                                    <a class="backtoblog" href="javascript:void(0)">&larr; Back to Madara Demo</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="go-to-top active">
+            <i class="icon ion-md-arrow-up"></i>
+        </div>
+        <script type="text/javascript" src="assets/contents/js/jquery.blockUI.min.js"></script>
+       
+        <script type="text/javascript" src="assets/contents/js/woocommerce.min.js"></script>
+        <script type="text/javascript" src="assets/contents/js/lazysizes.min.js"></script>
+        <script type="text/javascript" src="assets/contents/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/contents/js/imagesloaded.min.js"></script>
+       
+        <script type="text/javascript" src="assets/contents/js/template.js"></script>
+       
+        <script type="text/javascript" src="assets/contents/js/slick.min.js"></script>
+        <script type="text/javascript" src="assets/contents/js/manga-hover.js"></script>
+        <script type="text/javascript" src="assets/contents/js/slick.min.js"></script>
+    </body>
+</html>

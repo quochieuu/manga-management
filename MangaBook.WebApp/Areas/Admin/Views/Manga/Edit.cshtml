@@ -1,0 +1,110 @@
+﻿@model MangaBook.Data.Entities.Manga
+
+@{
+    ViewData["Title"] = "Chỉnh sửa thông tin truyện";
+}
+
+
+<h4>Chỉnh sửa thông tin truyện</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Genre</label>
+                <input name="genre" id="itags" class="form-control" value="@foreach (var t in ViewBag.GenreByManga) { Write(t.Name + ','); }" />
+                <small>Gõ dấu phẩy để thêm nhiều danh mục</small>
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Slug" class="control-label"></label>
+                <input asp-for="Slug" class="form-control" />
+                <span asp-validation-for="Slug" class="text-danger"></span>
+            </div>
+            <img src="~/uploads/manga/@Model.UrlImage" />
+            <input id="ipFileDefault" type="hidden" name="file" value="@Model.UrlImage" class="form-control" />
+            <a href="#" id="actionChangeImage">Đổi Ảnh</a>
+            <div class="form-group chang-image-inactive" id="changImage">
+                <label class="control-label"></label>
+                <input id="ipFile" type="hidden" name="files2" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Author" class="control-label"></label>
+                <input asp-for="Author" class="form-control" />
+                <span asp-validation-for="Author" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReleaseYear" class="control-label"></label>
+                <input asp-for="ReleaseYear" class="form-control" />
+                <span asp-validation-for="ReleaseYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="IsHot" /> @Html.DisplayNameFor(model => model.IsHot)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="MangaStatus" class="control-label"></label>
+                <select asp-for="MangaStatus" class="form-control">
+                    <option value="0">On Going</option>
+                    <option value="1">Full</option>
+                </select>
+                <span asp-validation-for="MangaStatus" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+<style>
+    .chang-image-inactive {
+        display: none;
+    }
+
+    .chang-image-active {
+        display: block;
+    }
+</style>
+@section Scripts {
+    <script>
+        $("#actionChangeImage").click(function () {
+            $("#changImage").attr("class", "form-group chang-image-active");
+            $("#ipFile").attr("type", "file");
+            $("#ipFile").attr("name", "files");
+            $("#ipFileDefault").attr("name", "filehidden");
+        })
+    </script>
+
+    <script src="~/js/tags/jquery.amsify.suggestags.js"></script>
+    <link href="~/js/tags/jquerysctipttop.css" rel="stylesheet" />
+    <link href="~/js/tags/amsify.suggestags.css" rel="stylesheet" />
+    <script>
+        $('#itags').amsifySuggestags({
+            suggestions: [
+                //'test'
+            ],
+            whiteList: false
+        }
+        );
+    </script>
+}

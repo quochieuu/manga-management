@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>Madara Demo &#8211; Manga WordPress Theme</title>
+       
+        <link rel="stylesheet" href="assets/includes/css/style.min.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/includes/css/home.css">
+        <link rel="stylesheet" href="assets/contents/css/wc-blocks-vendors-style.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/wc-blocks-style.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/shortcodes.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/woocommerce-layout.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)" />
+        <link rel="stylesheet" href="assets/contents/css/woocommerce.css" type="text/css" media="all" />
+        <style id="woocommerce-inline-inline-css" type="text/css">
+            .woocommerce form .form-row .required {
+                visibility: visible;
+            }
+        </style>
+        <link rel="stylesheet" href="hassets/contents/css/pagenavi-css.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/speaker.min.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/all.min.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/bootstrap.min.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/slick.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/slick-theme.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/style.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/ionicons.min.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/ct-icon/ct-icon.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="assets/contents/css/loaders.min.css" type="text/css" media="all" />
+        <style type="text/css">:root { --madara-main-color: #eb3349; } #pageloader.spinners { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999; background: #222; } p.madara-unyson { color: #ff0000; } .table.table-hover.list-bookmark tr:last-child td { text-align: center; } #adminmenu .wp-submenu li.current { display: none !important; } .show_tgmpa_version { float: right; padding: 0em 1.5em 0.5em 0; } .tgmpa > h2 { font-size: 23px; font-weight: 400; line-height: 29px; margin: 0; padding: 9px 15px 4px 0; } .update-php { width: 100%; height: 98%; min-height: 850px; padding-top: 1px; } .c-blog-post .entry-content .entry-content_wrap .read-container img.alignleft { margin: 10px 30px 10px 0 !important; } .c-blog-post .entry-content .entry-content_wrap .read-container img.alignright { margin: 10px 0px 10px 30px !important; } .read-container i.fas.fa-spinner.fa-spin { font-size: 31px; color: #888; } .c-blog-post .entry-content .entry-content_wrap .read-container img { cursor: pointer; } .choose-avatar .loading-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(255, 255, 255, 0.72); z-index: 1; display: none; } .choose-avatar .loading-overlay i.fas.fa-spinner { font-size: 40px; color: #ec3348; } .choose-avatar .loading-overlay .loading-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); } .choose-avatar.uploading .loading-overlay { display: block; } .site-header .c-sub-header-nav .entry-header { display: none; margin-bottom: 15px; } .site-header .c-sub-header-nav.sticky .entry-header { display: block; } .site-header .c-sub-header-nav.hide-sticky-menu.sticky .c-sub-nav_wrap { display: none; } .site-header .c-sub-header-nav.hide-sticky-menu .entry-header { margin-top: 15px; } @media (max-width: 480px) { .c-blog-post .entry-content .entry-content_wrap .reading-content { margin-left: -15px; margin-right: -15px; } } .settings-page table.list-bookmark > tbody tr td > div.mange-name:before { content: "Manga Name"; } .settings-page table.list-bookmark > tbody tr td > div.action:before { content: "Edit"; } .settings-page table.list-bookmark > tbody tr td > div.post-on:before { content: "Updated Time"; } .home .popular-slider.style-1 .c-blog__heading.style-2 h4 { color: #fff; }</style>
+        <script type="text/javascript" src="assets/includes/js/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/includes/js/jquery-migrate.min.js"></script>
+    </head>
+
+    <body
+        class="wp-manga-template-default single single-wp-manga postid-454 wp-embed-responsive theme-madara wp-manga-page reading-manga click-to-scroll keyboard-navigate woocommerce-no-js page header-style-1 sticky-enabled sticky-style-1 is-sidebar text-ui-dark manga-reading-paged-style minimal-reading-layout speaker-sized speaker-floating"
+    >
+        <div class="wrap">
+            <div class="body-wrap">
+                <div class="site-content">
+                    <div class="c-page-content style-1 reading-content-wrap chapter-type-text" data-site-url="https://live.mangabooth.com/">
+                        <div class="content-area">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="main-col col-md-12 col-sm-12 sidebar-hidden">
+                                        <h1 id="chapter-heading">Manga Text Chapter - Chapter 1</h1>
+
+                                        <!-- container & no-sidebar-->
+                                        <div class="main-col-inner">
+                                            <div class="c-blog-post">
+                                                <div class="entry-header header" id="manga-reading-nav-head" data-position="header" data-chapter="chapter-1" data-id="454">
+                                                    <div class="wp-manga-nav">
+                                                        <div class="entry-header_wrap">
+                                                            <div class="c-breadcrumb-wrapper">
+                                                                <div class="c-breadcrumb">
+                                                                    <ol class="breadcrumb">
+                                                                        <li>
+                                                                            <a href="https://live.mangabooth.com/"> Home </a>
+                                                                        </li>
+
+                                                                        <li>
+                                                                            <a href="https://live.mangabooth.com/manga/manga-text-chapter/"> Manga Text Chapter </a>
+                                                                        </li>
+
+                                                                        <li class="active">
+                                                                            Chapter 1
+                                                                        </li>
+                                                                    </ol>
+                                                                </div>
+
+                                                                <div class="action-icon">
+                                                                    <ul class="action_list_icon list-inline">
+                                                                        <li>
+                                                                            <a href="javascript:void(0)" class="btn-text-reading-increase"><i class="icon ion-md-add"></i></a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="javascript:void(0)" class="btn-text-reading-decrease"><i class="icon ion-md-remove"></i></a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <script type="text/javascript">
+                                                                                var requireLogin2BookMark = true;
+                                                                            </script>
+                                                                            <a href="#" class="wp-manga-action-button" data-action="bookmark" data-post="454" data-chapter="1678" data-page="1" title="Bookmark">
+                                                                                <i class="icon ion-ios-bookmark"></i>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#" class="wp-manga-action-button" data-action="toggle-contrast" title="Toggle Dark/Light Mode"><i class="icon ion-md-contrast"></i></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="select-view">
+                                                            <!-- select volume -->
+
+                                                            <!-- select chapter -->
+                                                            <div class="c-selectpicker selectpicker_chapter chapters_selectbox_holder" data-manga="454" data-chapter="chapter-1" data-vol="0" data-type="content">
+                                                                <label>
+                                                                    <select class="c-selectpicker selectpicker_chapter selectpicker single-chapter-select" style="" for="volume-id-0">
+                                                                        <option class="short" data-limit="40" value="chapter-1" data-redirect="https://live.mangabooth.com/manga/manga-text-chapter/chapter-3/">Chapter 3</option>
+
+                                                                        <option class="short" data-limit="40" value="chapter-1" data-redirect="https://live.mangabooth.com/manga/manga-text-chapter/chapter-2/">Chapter 2</option>
+
+                                                                        <option class="short" data-limit="40" value="chapter-1" data-redirect="https://live.mangabooth.com/manga/manga-text-chapter/chapter-1/" selected="selected">
+                                                                            Chapter 1
+                                                                        </option>
+                                                                    </select>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="select-pagination">
+                                                            <div class="nav-links">
+                                                                <div class="nav-next"><a href="https://live.mangabooth.com/manga/manga-text-chapter/chapter-2/" class="btn next_page" title="Chapter 2">Next</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="entry-content">
+                                                    <div class="entry-content_wrap">
+                                                        <div class="read-container">
+                                                            <div class="ad c-ads custom-code body-top-ads">
+                                                                <img width="730" height="92" src="https://live.mangabooth.com/wp-content/uploads/2017/10/ads-1.jpg" alt="Madara Ads Before Content" />
+                                                            </div>
+                                                            <div class="reading-content">
+                                                                <input type="hidden" id="wp-manga-current-chap" data-id="1678" value="chapter-1" />
+
+                                                                <div class="text-left">
+                                                                    <div class="mdp-speaker-wrapper">
+                                                                        <div class="mdp-speaker-box before-content speaker-round" style="background: rgba(2, 83, 238, 1);">
+                                                                            <div>
+                                                                                <!--[if lt IE 9]>
+                                                                                    <script>
+                                                                                        document.createElement("audio");
+                                                                                    </script>
+                                                                                <![endif]-->
+                                                                                <audio class="wp-audio-shortcode" id="audio-454-1" preload="metadata" style="width: 100%;" controls="controls">
+                                                                                    <source type="audio/mpeg" src="https://live.mangabooth.com/wp-content/uploads/speaker/post-454.mp3?cb=1625478132.mp3&#038;_=1" />
+                                                                                    <a href="https://live.mangabooth.com/wp-content/uploads/speaker/post-454.mp3?cb=1625478132.mp3">
+                                                                                        https://live.mangabooth.com/wp-content/uploads/speaker/post-454.mp3?cb=1625478132.mp3
+                                                                                    </a>
+                                                                                </audio>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <h3>There’s something about being the last child born in a family.</h3>
+                                                                    <p>
+                                                                        Something about being the only daughter. I’m the youngest in the family, the fourth child born after my three brothers. My whole life I’ve been coddled, protected,
+                                                                        bullied, bribed, and all of that is all fine, because I love my brothers, I love my family, but sometimes I wish I were the eldest, so I wouldn’t be underestimated the
+                                                                        way I am now. My name is Lana, but to them and my dad, I’m their Lainie baby even at twenty-two.
+                                                                    </p>
+                                                                    <p>
+                                                                        My brothers and dad stand by our tent at the side of the track. Dozens of cars zoom past. Blue, black, yellow colors flying by, helmets with rainbow visors, sponsor
+                                                                        logos, and testosterone galore. Other than the fact that they are all Formula One race cars, they have one other thing in common: none of those cars are ours. None of
+                                                                        those cars are being driven by one of our drivers.
+                                                                    </p>
+                                                                    <p>
+                                                                        I sigh and carry the lemonade cups back to our tent. The autumn cold air cuts into my cheeks and steals under my ponytail to freeze the back of my neck. This fall,
+                                                                        while testing possible drivers, I’ve gained two bright spots on my cheeks, thank you wind-chill combined with sunlight, and judging by the way my face is stinging now,
+                                                                        I’ll bet the red is spreading to my ears and nose.
+                                                                    </p>
+                                                                    <p><strong>There’s a whistle as I pass our neighbor’s tent. “Lainey, that for me?” one of the mechanics calls.</strong></p>
+                                                                    <p>
+                                                                        “Sorry I’ve only got two hands and they’re both spoken for.” I don’t even glance his way—it’s true that everybody is always nice to me, but I try not to get too
+                                                                        friendly with the other teams. We’re opponents, after all. Let’s keep it real.
+                                                                    </p>
+                                                                    <blockquote>
+                                                                        <p>HW RACING TEAM, our logo stares back at me as I reach our tent—black as background, red and white on the logo.</p>
+                                                                    </blockquote>
+                                                                    <p>
+                                                                        The cars are rumbling past in practice and we already know this will be our last, and worst, season. We used to be the team with the smallest tent, the lowest budget,
+                                                                        but the greatest talent. Now we have a small tent, low budget, and no talent. And next year, without my dad … I glance at my dad and he’s in a pullout chair. He’s got
+                                                                        his face in his hands, exhaling deeply.
+                                                                    </p>
+                                                                    <p>
+                                                                        At the side of the tent, the only driver out of three who still meant to race is puking. The car is smashed. He’s shaking, pale and pissed at himself. The driver was
+                                                                        physically unharmed, but we all know, if you smash the car in a test drive, you’re not going to get the gig.
+                                                                    </p>
+                                                                    <p>I bring the guy one of the lemonades. “Sugar,” I coax. “Could help.”</p>
+                                                                    <p>He keeps staring at his racing boots, his shoulders bent in defeat. “Only chance I get to test and blow it.”</p>
+                                                                    <p>I set the cup at his side and give him my most comforting smile, though my three brothers and my dad want to murder him.</p>
+                                                                    <p>“It’s gonna take hundreds of thousands to fix this fucker,” my oldest brother, Drake, grumbles as I head over to my dad.</p>
+                                                                    <p>“Hundreds of thousands we barely have,” Clay grumbles back.</p>
+                                                                    <p>I stroke the side of the smashed car. Dad has three cars. My favorite is Kelsey, and I’m relieved she was out. I’m still sad for Moira though.</p>
+                                                                    <p><strong>The day you think about a car as a friend …</strong></p>
+                                                                    <p>“Might be time for me to admit, I’m waiting for something that isn’t going to happen,” I hear my dad say.</p>
+                                                                    <p>I head over to him with the other lemonade cup. “It will, daddy, it will.”</p>
+                                                                    <p>
+                                                                        I’m the assigned team PR. I feed them, organize hotel stays, interviews for our drivers (not that that’s been a big part of the job lately). I get their clothes
+                                                                        cleaned, pick up the dry cleaning. Basically, I make a home for them an ocean and a thousand and one miles away from where we grew up in Ohio.
+                                                                    </p>
+                                                                    <p>
+                                                                        We uprooted after mom left us, all dad’s money going to a Formula One team. It’s his dream. One thing he gave up for my mom and could never get over. And now that I
+                                                                        know it’s his last chance to get it, it’s mine too.
+                                                                    </p>
+                                                                    <h3>“So what’s the plan?”</h3>
+                                                                    <p>“Not now, Lainie.”</p>
+                                                                    <p>They’re pissed. They need a pep talk, but I can see dad is fresh out of pep talks. He looks defeated.</p>
+                                                                    <p>“He’s not the only guy with talent,” I tell my brothers.</p>
+                                                                    <p>
+                                                                        “We don’t have money to take in anyone with talent anymore. Everyone’s been groomed since they were racing go-karts at six. By the time they’re in their teens they’re
+                                                                        already owned by their sponsors or their teams,” Drake says.
+                                                                    </p>
+                                                                    <p>“I’ll reel him in.”</p>
+                                                                    <p>I’m panicked. I’ve never seen them look so defeated and frustrated. When did it stop being fun? When we lost hope of winning.</p>
+                                                                    <p>“Clay, Drake, Adrian, shush. I’ll do it. You set the cars, dad’s head of the team, let me bring in the talent.”</p>
+                                                                    <p>It’s my dad’s dream. Now it’s mine too.</p>
+                                                                    <p>“I’ll do it.”</p>
+                                                                    <h3>My brothers keep on talking, and so does my dad.</h3>
+                                                                    <p>I grab my shoe and toss it at them. It hits Drake in the shoulders and he turns, scowling.</p>
+                                                                    <p>“I said, I’ll do it.”</p>
+                                                                    <p>“Did you just throw your shoe at me?”</p>
+                                                                    <p>I grab the other one, and throw it too. “No, I threw you two.”</p>
+                                                                    <p>“Lainie …”</p>
+                                                                    <p>“Don’t Lainie me. Dad, you run this team, you guys fix the cars, let me bring in the talent.”</p>
+                                                                    <p>“Look, Lane, just because dad made you the PR doesn’t mean you have a lick of sense in determining whether someone has talent,” Drake says.</p>
+                                                                    <p>“It’s not hard to spot. Give me a chance. This is our life. We gave up … everything for this. I don’t want us to quit.” I step forward. “I don’t want Dad to quit.”</p>
+                                                                    <p><strong>He looks at me.</strong></p>
+                                                                    <p>
+                                                                        I don’t mention that I’m afraid that quitting might make him give up, that quitting will give him some sort of permission to leave now that he has no dream to live for.
+                                                                    </p>
+                                                                    <p>
+                                                                        <img
+                                                                            loading="lazy"
+                                                                            class="alignleft wp-image-266 size-medium"
+                                                                            src="https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-539934-300x169.jpg"
+                                                                            alt=""
+                                                                            width="300"
+                                                                            height="169"
+                                                                            srcset="
+                                                                                https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-539934-300x169.jpg   300w,
+                                                                                https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-539934-600x338.jpg   600w,
+                                                                                https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-539934-1024x576.jpg 1024w,
+                                                                                https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-539934-768x432.jpg   768w,
+                                                                                https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-539934-1536x864.jpg 1536w,
+                                                                                https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-539934.jpg          1920w
+                                                                            "
+                                                                            sizes="(max-width: 300px) 100vw, 300px"
+                                                                        />
+                                                                        Duis luctus tempus pulvinar. Curabitur tempor diam non blandit rhoncus. Praesent pretium et metus et faucibus. Integer tempor convallis dignissim. Vestibulum eu ligula
+                                                                        nisi. In at massa dui. Nullam vel odio sagittis, dignissim quam et, blandit sem. Etiam lacus ante, luctus tristique aliquet sed, dictum et nunc. Sed varius ultrices
+                                                                        lorem, aliquam feugiat ante. Etiam mollis, ipsum in ornare fringilla, sapien tellus vulputate metus, a tristique nisi magna cursus sem. Fusce gravida velit purus, in
+                                                                        ullamcorper nisl consequat vestibulum. Etiam ut aliquet dolor. Integer et varius enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                                                                        mus. Donec euismod aliquet elementum. Integer id quam vitae nulla ornare cursus sit amet a metus. Curabitur ut ullamcorper ex. Nulla molestie id nunc non maximus. Sed
+                                                                        vestibulum ut mauris a placerat.
+                                                                        <img
+                                                                            loading="lazy"
+                                                                            class="alignright wp-image-93 size-medium"
+                                                                            src="https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-550617-300x169.jpg"
+                                                                            alt=""
+                                                                            width="300"
+                                                                            height="169"
+                                                                            srcset="
+                                                                                https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-550617-300x169.jpg   300w,
+                                                                                https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-550617-600x338.jpg   600w,
+                                                                                https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-550617-1024x576.jpg 1024w,
+                                                                                https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-550617-768x432.jpg   768w,
+                                                                                https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-550617-1536x864.jpg 1536w,
+                                                                                https://live.mangabooth.com/wp-content/uploads/2017/10/wallhaven-550617.jpg          1920w
+                                                                            "
+                                                                            sizes="(max-width: 300px) 100vw, 300px"
+                                                                        />
+                                                                        Nunc purus neque, eleifend non arcu vel, pretium rhoncus lectus. Nam sagittis dui ac ipsum convallis fermentum. Duis semper nisi ac nunc feugiat semper. Praesent
+                                                                        rhoncus auctor quam, at hendrerit urna pretium sed. Suspendisse nulla eros, consequat eu iaculis vitae, interdum in nisi. Sed efficitur nunc quis est rutrum, quis
+                                                                        aliquam turpis ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur volutpat dui nec felis lobortis, a laoreet
+                                                                        leo sagittis. Nunc finibus justo velit, non cursus risus pretium nec. Nunc aliquet ac sapien quis tempor. Praesent eros arcu, gravida vitae consectetur sed, laoreet sed
+                                                                        lectus. Phasellus ultrices, velit ullamcorper elementum finibus, est purus dictum lacus, a rhoncus lectus nisl ut odio. Donec in nisl vitae nulla pharetra tristique.
+                                                                        Etiam arcu felis, pellentesque at laoreet lobortis, consequat vitae augue.
+                                                                    </p>
+                                                                </div>
+                                                                <div id="text-chapter-toolbar">
+                                                                    <a href="#"><i class="icon ion-md-settings"></i></a>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="ad c-ads custom-code body-bottom-ads">
+                                                                <img width="730" height="92" src="https://live.mangabooth.com/wp-content/uploads/2017/10/ads-1.jpg" alt="Madara Ads After Content" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="entry-header footer" id="manga-reading-nav-foot" data-position="footer" data-id="454">
+                                                    <div class="wp-manga-nav">
+                                                        <div class="select-view">
+                                                            <!-- select volume -->
+
+                                                            <!-- select chapter -->
+                                                            <div class="c-selectpicker selectpicker_chapter chapters_selectbox_holder" data-manga="454" data-chapter="chapter-1" data-vol="0" data-type="content">
+                                                                <label>
+                                                                    <select class="c-selectpicker selectpicker_chapter selectpicker single-chapter-select" style="" for="volume-id-0">
+                                                                        <option class="short" data-limit="40" value="chapter-1" data-redirect="https://live.mangabooth.com/manga/manga-text-chapter/chapter-3/">Chapter 3</option>
+
+                                                                        <option class="short" data-limit="40" value="chapter-1" data-redirect="https://live.mangabooth.com/manga/manga-text-chapter/chapter-2/">Chapter 2</option>
+
+                                                                        <option class="short" data-limit="40" value="chapter-1" data-redirect="https://live.mangabooth.com/manga/manga-text-chapter/chapter-1/" selected="selected">
+                                                                            Chapter 1
+                                                                        </option>
+                                                                    </select>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="select-pagination">
+                                                            <div class="nav-links">
+                                                                <div class="nav-next"><a href="https://live.mangabooth.com/manga/manga-text-chapter/chapter-2/" class="btn next_page" title="Chapter 2">Next</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="main-col col-12 col-sm-8 col-md-8 col-lg-8">
+                                                    <!-- comments-area -->
+
+                                                    <h4>Comments for chapter &quot;Chapter 1&quot;</h4>
+                                                    <div id="manga-discussion" class="c-blog__heading style-2 font-heading">
+                                                        <i class="ion-ios-star"></i>
+                                                        <h4>MANGA DISCUSSION</h4>
+                                                    </div>
+                                                    <div class="manga-discussion wrapper">
+                                                        <div class="hr mv40"></div>
+
+                                                        <div id="madara-comments" class="comments-area">
+                                                            <div id="respond" class="comment-respond">
+                                                                <h4 id="reply-title" class="comment-reply-title">
+                                                                    Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/manga/manga-text-chapter/chapter-1/#respond" style="display: none;">Cancel reply</a></small>
+                                                                </h4>
+                                                                <form action="https://live.mangabooth.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+                                                                    <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p>
+                                                                    <p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" placeholder="Comment"></textarea></p>
+                                                                    <p class="comment-form-author">
+                                                                        <label for="author">Name</label> <span class="required">*</span>
+                                                                        <input id="author" name="author" type="text" placeholder="Name" value="" size="30" aria-required="true" />
+                                                                    </p>
+                                                                    <p class="comment-form-email">
+                                                                        <label for="email">Email</label> <span class="required">*</span>
+                                                                        <input id="email" name="email" type="text" placeholder="Email" value="" size="30" aria-required="true" />
+                                                                    </p>
+                                                                    <p class="comment-form-url"><label for="url">Website</label><input id="url" name="url" type="text" placeholder="Website" value="" size="30" /></p>
+                                                                    <p class="comment-form-cookies-consent">
+                                                                        <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" />
+                                                                        <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label>
+                                                                    </p>
+                                                                    <p class="form-submit">
+                                                                        <input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type="hidden" name="comment_post_ID" value="454" id="comment_post_ID" />
+                                                                        <input type="hidden" name="comment_parent" id="comment_parent" value="0" />
+                                                                    </p>
+                                                                    <input type="hidden" name="wp_manga_chapter_id" value="1678" />
+                                                                </form>
+                                                            </div>
+                                                            <!-- #respond -->
+                                                        </div>
+                                                        <!-- #comments -->
+                                                    </div>
+
+                                                    <!-- END comments-area -->
+                                                </div>
+
+                                                <div class="sidebar-col col-md-4 col-sm-4">
+                                                    <div id="main-sidebar" class="main-sidebar" role="complementary">
+                                                        <div class="row">
+                                                            <div id="manga-genres-id-7" class="widget col-xs-12 col-md-12 bordered no-icon heading-style-1 manga-genres-class-name">
+                                                                <div class="widget__inner manga-genres-class-name__inner c-widget-wrap">
+                                                                    <div class="genres_wrap">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <div class="widget-heading font-nav"><h5 class="heading">GENRES</h5></div>
+                                                                                <div class="widget-content">
+                                                                                    <div class="genres__collapse" style="display: block;">
+                                                                                        <div class="row genres">
+                                                                                            <ul class="list-unstyled">
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/action/"> Action </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/adult/"> Adult </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/adventure/"> Adventure </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/anime/"> Anime </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/cartoon/"> Cartoon </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/comedy/"> Comedy </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/comic/"> Comic </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/cooking/"> Cooking </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/detective/"> Detective </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/doujinshi/"> Doujinshi </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/drama/"> Drama </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/ecchi/"> Ecchi </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/fantasy/"> Fantasy </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/harem/"> Harem </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/historical/"> Historical </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/horror/"> Horror </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/josei/"> Josei </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/live-action/"> Live action </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/manga/"> Manga </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/manhua/"> Manhua </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/manhwa/"> Manhwa </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/martial-arts/"> Martial Arts </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/mature/"> Mature </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/mecha/"> Mecha </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/mystery/"> Mystery </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/one-shot/"> One shot </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/romance/"> Romance </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/school-life/"> School Life </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/sci-fi/"> Sci-fi </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/seinen/"> Seinen </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/shoujo/"> Shoujo </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/shoujo-ai/"> Shoujo Ai </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/shounen/"> Shounen </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/shounen-ai/"> Shounen Ai </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/slice-of-life/"> Slice of Life </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/smut/"> Smut </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/soft-yaoi/"> Soft Yaoi </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/soft-yuri/"> Soft Yuri </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/sports/"> Sports </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/supernatural/"> Supernatural </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/tragedy/"> Tragedy </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/webtoon/"> Webtoon </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/yaoi/"> Yaoi </a>
+                                                                                                </li>
+                                                                                                <li class="col-xs-6 col-sm-6">
+                                                                                                    <a href="https://live.mangabooth.com/manga-genre/yuri/"> Yuri </a>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div id="manga-history-id-4" class="widget col-xs-12 col-md-12 background no-icon heading-style-1 manga-history-widget">
+                                                                <div class="widget__inner manga-history-widget__inner c-widget-wrap">
+                                                                    <div class="widget-heading font-nav"><h5 class="heading">MY READING HISTORY</h5></div>
+                                                                    <div class="widget-content">
+                                                                        <div class="my-history">
+                                                                            <!-- -->
+                                                                            <span class="no-histories" style="display: none;">You don&#039;t have anything in histories</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <script type="text/javascript">
+                                                            jQuery(document).on("ready", function () {
+                                                                jQuery.ajax({
+                                                                    url: manga.ajax_url,
+                                                                    type: "GET",
+                                                                    data: {
+                                                                        action: "guest_histories",
+                                                                        count: 3,
+                                                                    },
+                                                                    success: function (html) {
+                                                                        if (html && html != "0") {
+                                                                            jQuery("#manga-history-id-4 .my-history").html(html);
+                                                                        } else {
+                                                                            jQuery("#manga-history-id-4 .no-histories").show();
+                                                                        }
+                                                                    },
+                                                                    complete: function (e) {},
+                                                                });
+                                                            });
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="wp-manga-tags-wrapper">
+                                                <div class="wp-manga-tags">
+                                                    <h5>Tags:</h5>
+                                                    <div class="wp-manga-tags-list">
+                                                        <a href="https://live.mangabooth.com/manga-tag/achitaka/" class="">Achitaka</a>, <a href="https://live.mangabooth.com/manga-tag/action/" class="">Action</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="site-content"> -->
+
+                <footer class="site-footer">
+                    <div class="ad c-ads custom-code footer-ads col-md-12"><img width="730" height="92" src="https://live.mangabooth.com/wp-content/uploads/2017/10/ads-1.jpg" alt="Madara Ads Footer" /></div>
+                    <div class="top-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="wrap_social_account">
+                                        <ul class="list-inline social_account__item">
+                                            <li>
+                                                <a class="social-icons" target="_blank" rel="noopener" href="#" title="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="social-icons" target="_blank" rel="noopener" href="#" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="social-icons" target="_blank" rel="noopener" href="#" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="social-icons" target="_blank" rel="noopener" href="#" title="Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="social-icons" target="_blank" rel="noopener" href="#" title="Pinterest"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="social-icons" target="_blank" rel="noopener" href="#" title="Youtube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="social-icons" target="_blank" rel="noopener" href="#" title="Flickr"><i class="fab fa-flickr" aria-hidden="true"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bottom-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="nav-footer">
+                                        <ul class="list-inline font-nav">
+                                            <li id="menu-item-76" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-76"><a href="/">HOME</a></li>
+                                            <li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-79"><a href="https://live.mangabooth.com/blog/">BLOG</a></li>
+                                            <li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="https://live.mangabooth.com/contact/">CONTACT US</a></li>
+                                            <li id="menu-item-77" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="https://live.mangabooth.com/about-us/">ABOUT US</a></li>
+                                            <li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80"><a href="#">COOKIE POLICY</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="copyright">
+                                        <p>&copy; 2021 Madara Inc. All rights reserved</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+              <div id="hover-infor"></div>
+            </div>
+            <!-- class="wrap" -->
+        </div>
+        <!-- class="body-wrap" -->
+
+        <!-- Modal -->
+        <div class="wp-manga-section">
+            <input type="hidden" name="bookmarking" value="0" />
+            <div class="modal fade" id="form-login" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="login" class="login">
+                                <h3>
+                                    <a href="https://live.mangabooth.com/" title="Madara Demo" tabindex="-1">Sign in</a>
+                                </h3>
+                                <p class="message login"></p>
+                                <meta name="robots" content="max-image-preview:large" />
+                                <link rel="dns-prefetch" href="//s.w.org" />
+                                <script type="text/javascript" src="https://live.mangabooth.com/wp-includes/js/wp-embed.min.js?ver=5.8.1" id="wp-embed-js"></script>
+                                <link rel="stylesheet" id="mediaelement-css" href="https://live.mangabooth.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css" type="text/css" media="all" />
+                                <link rel="stylesheet" id="wp-mediaelement-css" href="https://live.mangabooth.com/wp-includes/js/mediaelement/wp-mediaelement.min.css" type="text/css" media="all" />
+                                <form name="loginform" id="loginform" method="post">
+                                    <p>
+                                        <label>
+                                            Username or Email Address * <br />
+                                            <input type="text" name="log" class="input user_login" value="" size="20" />
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            Password * <br />
+                                            <input type="password" autocomplete="" name="pwd" class="input user_pass" value="" size="20" />
+                                        </label>
+                                    </p>
+                                    <p></p>
+                                    <p class="forgetmenot">
+                                        <label> <input name="rememberme" type="checkbox" id="rememberme" value="forever" />Remember Me </label>
+                                    </p>
+                                    <p class="submit">
+                                        <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Log In" /> <input type="hidden" name="redirect_to" value="https://live.mangabooth.com/wp-admin/" />
+                                        <input type="hidden" name="testcookie" value="1" />
+                                    </p>
+                                </form>
+                                <p class="nav">
+                                    <a href="javascript:avoid(0)" class="to-reset">Lost your password?</a>
+                                </p>
+                                <p class="backtoblog">
+                                    <a href="javascript:void(0)">&larr; Back to Madara Demo</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="form-sign-up" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="sign-up" class="login">
+                                <h3>
+                                    <a href="https://live.mangabooth.com/" title="Madara Demo" tabindex="-1">Sign Up</a>
+                                </h3>
+                                <p class="message register">Register For This Site.</p>
+                                <form name="registerform" id="registerform" novalidate="novalidate">
+                                    <p>
+                                        <label>
+                                            Username * <br />
+                                            <input type="text" name="user_sign-up" class="input user_login" value="" size="20" />
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            Email Address * <br />
+                                            <input type="email" name="email_sign-up" class="input user_email" value="" size="20" />
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            Password *<br />
+                                            <input type="password" name="pass_sign-up" autocomplete="" class="input user_pass" value="" size="25" />
+                                        </label>
+                                    </p>
+                                    <p></p>
+
+                                    <input type="hidden" name="redirect_to" value="" />
+                                    <p class="submit">
+                                        <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Register" />
+                                    </p>
+                                </form>
+                                <p class="nav">
+                                    <a href="javascript:void(0)" class="to-login">Log in</a>
+                                    |
+                                    <a href="javascript:void(0)" class="to-reset">Lost your password?</a>
+                                </p>
+                                <p class="backtoblog">
+                                    <a href="javascript:void(0)">&larr; Back to Madara Demo</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="form-reset" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="reset" class="login">
+                                <h3>
+                                    <a href="javascript:void(0)" class="to-reset">Lost your password?</a>
+                                </h3>
+                                <p class="message reset">Please enter your username or email address. You will receive a link to create a new password via email.</p>
+                                <form name="resetform" id="resetform" method="post">
+                                    <p>
+                                        <label>
+                                            Username or Email Address <br />
+                                            <input type="text" name="user_reset" id="user_reset" class="input" value="" size="20" />
+                                        </label>
+                                    </p>
+                                    <p class="submit">
+                                        <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Get New Password" />
+                                        <input type="hidden" name="testcookie" value="1" />
+                                    </p>
+                                </form>
+                                <p>
+                                    <a class="backtoblog" href="javascript:void(0)">&larr; Back to Madara Demo</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="go-to-top active">
+            <i class="icon ion-md-arrow-up"></i>
+        </div>
+        <script type="text/javascript" src="assets/contents/js/jquery.blockUI.min.js"></script>
+       
+        <script type="text/javascript" src="assets/contents/js/woocommerce.min.js"></script>
+        <script type="text/javascript" src="assets/contents/js/lazysizes.min.js"></script>
+        <script type="text/javascript" src="assets/contents/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/contents/js/imagesloaded.min.js"></script>
+       
+        <script type="text/javascript" src="assets/contents/js/template.js"></script>
+       
+        <script type="text/javascript" src="assets/contents/js/slick.min.js"></script>
+        <script type="text/javascript" src="assets/contents/js/manga-hover.js"></script>
+        <script type="text/javascript" src="assets/contents/js/slick.min.js"></script>
+    </body>
+</html>
+<!-- Cached by WP-Optimize (gzip) - https://getwpo.com - Last modified: Thu, 28 Oct 2021 14:07:09 GMT -->

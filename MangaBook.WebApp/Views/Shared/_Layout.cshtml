@@ -1,0 +1,457 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> UserManager
+@{
+    var user = await UserManager.GetUserAsync(User);
+}
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>@ViewData["Title"] - Manga Book</title>
+
+    <link rel="stylesheet" href="client/assets/includes/css/style.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="client/assets/includes/css/home.css">
+    <link rel="stylesheet" href="client/assets/contents/css/wc-blocks-vendors-style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="client/assets/contents/css/wc-blocks-style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="client/assets/contents/css/shortcodes.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="client/assets/contents/css/woocommerce-layout.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="client/assets/contents/css/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)" />
+    <link rel="stylesheet" href="client/assets/contents/css/woocommerce.css" type="text/css" media="all" />
+    <style id="woocommerce-inline-inline-css" type="text/css">
+        .woocommerce form .form-row .required {
+            visibility: visible;
+        }
+    </style>
+    <link rel="stylesheet" href="hassets/contents/css/pagenavi-css.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="client/assets/contents/css/speaker.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="client/assets/contents/css/all.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="client/assets/contents/css/bootstrap.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="client/assets/contents/css/slick.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="client/assets/contents/css/slick-theme.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="client/assets/contents/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="client/assets/contents/css/ionicons.min.css" type="text/css" media="all" />
+
+    <!-- <link rel="stylesheet" href="client/assets/contents/css/ct-icon/ct-icon.css" type="text/css" media="all" /> -->
+    <link rel="stylesheet" href="client/assets/contents/css/loaders.min.css" type="text/css" media="all" />
+    <link href="~/css/homebelow.css" rel="stylesheet" />
+    <script type="text/javascript" src="client/assets/includes/js/jquery.min.js"></script>
+    <script type="text/javascript" src="client/assets/includes/js/jquery-migrate.min.js"></script>
+    <link href="~/css/custom-theme.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+
+<body class="home page-template page-template-page-templates page-template-front-page page-template-page-templatesfront-page-php page page-id-12 wp-embed-responsive theme-madara woocommerce-no-js header-style-1 sticky-enabled sticky-style-1 is-sidebar text-ui-dark minimal-reading-layout speaker-sized speaker-floating manga-page reading-manga search ">
+    <div class="wrap">
+        <div class="body-wrap">
+            <header class="site-header">
+                <div class="c-header__top">
+                    <ul class="search-main-menu">
+                        <li>
+                            <form id="blog-post-search" class="ajax" method="get" action="/tim-kiem">
+                                <input type="text" placeholder="Search..." name="s" value="" />
+                                <input type="submit" value="Search" />
+                            </form>
+                        </li>
+                    </ul>
+                    <div class="main-navigation style-1">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="main-navigation_wrap">
+                                        <div class="wrap_branding">
+                                            <a class="logo" href="/" title="Manga Book">
+                                                <img class="img-responsive" src="https://live.mangabooth.com/wp-content/themes/madara/images/logo.png" alt="Madara Demo" />
+                                            </a>
+                                        </div>
+
+                                        <div class="main-menu">
+                                            <ul class="nav navbar-nav main-navbar">
+                                                @foreach (var item in ViewBag.Menu)
+                                                {
+                                                    if (item.Parent == null && item.InverseParents.Count == 0)
+                                                    {
+                                                        <li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23">
+                                                            <a href="@item.Link">@item.Name </a>
+                                                        </li>
+                                                    }
+                                                    if (item.InverseParents != null && item.InverseParents.Count != 0)
+                                                    {
+
+                                                        <li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children menu-item-27">
+                                                            <a href="@item.Link" aria-current="page">@item.Name</a>
+                                                            <ul class="sub-menu">
+                                                                @if (item.InverseParents != null && item.InverseParents.Count != 0)
+                                                                {
+                                                                    @foreach (var subMenu in item.InverseParents)
+                                                                    {
+                                                                        if (subMenu.ParentId != null && subMenu.InverseParents.Count != 0)
+                                                                        {
+
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <li id="menu-item-341" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-341">
+                                                                                <a href="@subMenu.Link">@subMenu.Name </a>
+                                                                            </li>
+                                                                        }
+                                                                    }
+                                                                }
+                                                            </ul>
+                                                        </li>
+                                                    }
+
+                                                }
+                                            </ul>
+                                        </div>
+
+                                        <div class="search-navigation search-sidebar">
+                                            <div id="manga-search-3" class="widget col-12 col-md-12 default no-icon manga-widget widget-manga-search">
+                                                <div class="widget__inner manga-widget widget-manga-search__inner c-widget-wrap">
+                                                    <div class="widget-content">
+                                                        <div class="search-navigation__wrap">
+
+                                                            <ul class="main-menu-search nav-menu">
+                                                                <li class="menu-search">
+                                                                    <a href="javascript:;" class="open-search-main-menu"> <i class="icon ion-ios-search"></i> <i class="icon ion-android-close"></i> </a>
+                                                                    <ul class="search-main-menu">
+                                                                        <li>
+                                                                            <form class="manga-search-form search-form ajax" action="https://live.mangabooth.com/" method="get">
+                                                                                <input class="manga-search-field" type="text" placeholder="Search..." name="s" value="" />
+                                                                                <input type="hidden" name="post_type" value="wp-manga" /> <i class="icon ion-ios-search"></i>
+                                                                                <div class="loader-inner ball-clip-rotate-multiple">
+                                                                                    <div></div>
+                                                                                    <div></div>
+                                                                                </div>
+                                                                                <input type="submit" value="Search" />
+                                                                            </form>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+
+                                                            <div class="link-adv-search">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="c-togle__menu">
+                                            <button type="button" class="menu_icon__open"><span></span> <span></span> <span></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mobile-menu menu-collapse off-canvas">
+                    <div class="close-nav">
+                        <button class="menu_icon__close"><span></span> <span></span></button>
+                    </div>
+
+                    <div class="c-modal_item">
+                        <!-- Button trigger modal -->
+                        <span class="c-modal_sign-in">
+                            <a href="#" data-toggle="modal" data-target="#form-login" class="btn-active-modal">Sign in</a>
+                        </span>
+
+                        <span class="c-modal_sign-up">
+                            <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal">Sign up</a>
+                        </span>
+                    </div>
+
+                   
+                </div>
+                <div class="c-sub-header-nav with-border">
+                    <div class="container">
+                        <div class="c-sub-nav_wrap">
+                            <div class="sub-nav_content">
+                            </div>
+
+                            <div class="c-modal_item">
+                                @if (SignInManager.IsSignedIn(User))
+                                {
+                                <ul id="logonNav">
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children parent menu-item-72">
+                                        <a asp-controller="Account" asp-action="Profile" asp-route-id="@user.Id">Hi, @(user.FullName ?? user.UserName)</a>
+                                        <ul class="sub-menu">
+                                            <li id="menu-item-28" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-28">
+                                                <a href="/ho-so">Hồ sơ</a>
+                                            </li>
+                                            <li id="menu-item-28" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-28">
+                                                <a href="/cap-nhat-ho-so">Cập nhật hồ sơ</a>
+                                            </li>
+                                            <li id="menu-item-28" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-28">
+                                                <a href="/truyen-cua-ban">Truyện của bạn</a>
+                                            </li>
+                                            <li id="menu-item-28" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-28">
+                                                <a href="/truyen-yeu-thich">Truyện đã lưu</a>
+                                            </li>
+                                            <li id="menu-item-28" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-28">
+                                                <a href="/lich-su-binh-luan">Lịch sử bình luận</a>
+                                            </li>
+                                            <li id="menu-item-28" class="menu-item menu-item-type-taxonomy menu-item-object-wp-manga-genre menu-item-28">
+                                                <a href="/dang-xuat">Đăng xuất</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                }
+                                else
+                                {
+                                    <!-- Button trigger modal -->
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login" class="btn-active-modal">Sign in</a>
+                                    <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal">Sign up</a>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            @RenderBody()
+
+
+            <!-- <div class="site-content"> -->
+
+            <footer class="site-footer">
+                <div class="ad c-ads custom-code footer-ads col-md-12"><img width="730" height="92" src="https://live.mangabooth.com/wp-content/uploads/2017/10/ads-1.jpg" alt="Madara Ads Footer" /></div>
+                <div class="top-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="wrap_social_account">
+                                    <ul class="list-inline social_account__item">
+                                        <li>
+                                            <a class="social-icons" target="_blank" rel="noopener" href="#" title="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="social-icons" target="_blank" rel="noopener" href="#" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="social-icons" target="_blank" rel="noopener" href="#" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="social-icons" target="_blank" rel="noopener" href="#" title="Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="social-icons" target="_blank" rel="noopener" href="#" title="Pinterest"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="social-icons" target="_blank" rel="noopener" href="#" title="Youtube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                                        </li>
+                                        <li>
+                                            <a class="social-icons" target="_blank" rel="noopener" href="#" title="Flickr"><i class="fab fa-flickr" aria-hidden="true"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="nav-footer">
+                                    <ul class="list-inline font-nav">
+                                        <li id="menu-item-76" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-76"><a href="/" aria-current="page">HOME</a></li>
+                                        <li id="menu-item-79" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79"><a href="https://live.mangabooth.com/blog/">BLOG</a></li>
+                                        <li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="https://live.mangabooth.com/contact/">CONTACT US</a></li>
+                                        <li id="menu-item-77" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="https://live.mangabooth.com/about-us/">ABOUT US</a></li>
+                                        <li id="menu-item-80" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80"><a href="#">COOKIE POLICY</a></li>
+                                    </ul>
+                                </div>
+                                <div class="copyright">
+                                    <p>&copy; 2021 Madara Inc. All rights reserved</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <div id="hover-infor"></div>
+        </div>
+        <!-- class="wrap" -->
+    </div>
+    <!-- class="body-wrap" -->
+    <!-- Modal -->
+    <div class="wp-manga-section">
+        <input type="hidden" name="bookmarking" value="0" />
+        <div class="modal fade" id="form-login" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="login" class="login">
+                            <h3>
+                                <a href="#" title="Madara Demo" tabindex="-1">Sign in</a>
+                            </h3>
+                            <p class="message login"></p>
+                            
+                           
+                            <form method="post" asp-action="Login" asp-controller="Account">
+                                <p>
+                                    <label>
+                                        Username * <br />
+                                        <input type="text" name="Email" class="input user_login" size="20" />
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        Password * <br />
+                                        <input type="password" name="Password" class="input user_pass" size="20" />
+                                    </label>
+                                </p>
+                                <p></p>
+                                <p class="forgetmenot">
+                                    <label> <input name="RememberMe" type="checkbox" id="rememberme" value="forever" />Remember Me </label>
+                                </p>
+                                <p class="submit">
+                                    <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Log In" /> <input type="hidden" name="redirect_to" value="https://live.mangabooth.com/wp-admin/" />
+                                    <input type="hidden" name="testcookie" value="1" />
+                                </p>
+                            </form>
+                            <p class="nav">
+                                <a href="javascript:avoid(0)" class="to-reset">Lost your password?</a>
+                            </p>
+                            <p class="backtoblog">
+                                <a href="javascript:void(0)">&larr; Back to Home</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="form-sign-up" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="sign-up" class="login">
+                            <h3>
+                                <a href="#" title="Manga" tabindex="-1">Sign Up</a>
+                            </h3>
+                            <p class="message register">Register For This Site.</p>
+                            <form method="post" asp-action="Register" asp-controller="Account">
+                                <p>
+                                    <label>
+                                        Full Name * <br />
+                                        <input type="text" name="FullName" class="input user_login" size="20" />
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        UserName * <br />
+                                        <input type="text" name="Email" class="input user_email" size="20" />
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        Password *<br />
+                                        <input type="password" name="Password" autocomplete="" class="input user_pass" size="25" />
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        Confirm Password *<br />
+                                        <input type="password" name="ConfirmPassword" autocomplete="" class="input user_pass" size="25" />
+                                    </label>
+                                </p>
+                                <p></p>
+
+                                <input type="hidden" name="redirect_to" value="" />
+                                <p class="submit">
+                                    <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Register" />
+                                </p>
+                            </form>
+                            <p class="nav">
+                                <a href="javascript:void(0)" class="to-login">Log in</a>
+                                |
+                                <a href="javascript:void(0)" class="to-reset">Lost your password?</a>
+                            </p>
+                            <p class="backtoblog">
+                                <a href="/">&larr; Back to Home</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="form-reset" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="reset" class="login">
+                            <h3>
+                                <a href="javascript:void(0)" class="to-reset">Lost your password?</a>
+                            </h3>
+                            <p class="message reset">Please enter your username or email address. You will receive a link to create a new password via email.</p>
+                            <form name="resetform" id="resetform" method="post">
+                                <p>
+                                    <label>
+                                        Username or Email Address <br />
+                                        <input type="text" name="user_reset" id="user_reset" class="input" value="" size="20" />
+                                    </label>
+                                </p>
+                                <p class="submit">
+                                    <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Get New Password" />
+                                    <input type="hidden" name="testcookie" value="1" />
+                                </p>
+                            </form>
+                            <p>
+                                <a class="backtoblog" href="javascript:void(0)">&larr; Back to Madara Demo</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="go-to-top active">
+        <i class="icon ion-md-arrow-up"></i>
+    </div>
+
+
+    <script type="text/javascript" src="client/assets/contents/js/jquery.blockUI.min.js"></script>
+
+    <script type="text/javascript" src="client/assets/contents/js/woocommerce.min.js"></script>
+    <script type="text/javascript" src="client/assets/contents/js/lazysizes.min.js"></script>
+    <script type="text/javascript" src="client/assets/contents/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="client/assets/contents/js/imagesloaded.min.js"></script>
+
+    <script type="text/javascript" src="client/assets/contents/js/template.js"></script>
+
+    <script type="text/javascript" src="client/assets/contents/js/slick.min.js"></script>
+    <script type="text/javascript" src="client/assets/contents/js/manga-hover.js"></script>
+    <script type="text/javascript" src="client/assets/contents/js/slick.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

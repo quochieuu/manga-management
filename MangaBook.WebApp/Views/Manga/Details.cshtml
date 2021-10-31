@@ -1,0 +1,374 @@
+﻿@model MangaBook.Data.Entities.Manga
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="site-content">
+    <div class="post-454 wp-manga type-wp-manga status-publish has-post-thumbnail hentry wp-manga-tag-achitaka wp-manga-tag-action wp-manga-release-92 wp-manga-author-achitaka wp-manga-author-akira-amano wp-manga-artist-ichita-ortiki wp-manga-artist-inmoki wp-manga-genre-action wp-manga-genre-adventure">
+        <div class="profile-manga summary-layout-1" style="background-image: url(https://live.mangabooth.com/wp-content/themes/madara/images/bg-search.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12">
+                        <div class="c-breadcrumb-wrapper">
+                            <div class="c-breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <a href="/"> Home </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/"> @Model.Name </a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="post-title">
+                            <span class="manga-title-badges new">NEW</span>
+                            <h1>
+                                @Model.Name
+                            </h1>
+                        </div>
+                        <div class="tab-summary">
+                            <div class="summary_image">
+                                <a href="#">
+                                    <img width="193"
+                                         height="278"
+                                         data-src="./uploads/manga/@Model.UrlImage"
+                                         data-srcset="./uploads/manga/@Model.UrlImage 193w, ./uploads/manga/@Model.UrlImage 125w"
+                                         data-sizes="(max-width: 193px) 100vw, 193px"
+                                         class="img-responsive lazyload effect-fade"
+                                         src="./uploads/manga/@Model.UrlImage"
+                                         style="padding-top: 278px;"
+                                         alt="@Model.Name" />
+                                </a>
+                            </div>
+                            <div class="summary_content_wrap">
+                                <div class="summary_content">
+                                    <div class="post-content">
+
+
+                                        <div class="post-content_item">
+                                            @if (ViewBag.UserReatedScore == null || ViewBag.UserReatedScore == 0)
+                                            {
+                                                <div id="basic" style="font-size: 25px;"></div> <br />
+                                                <div style="font-size: 20px">Có @ViewBag.RatingScore đã đánh giá</div>
+                                                <form action="/danh-gia-@Model.Id" method="post" id="formRating">
+                                                    <input type="hidden" readonly id="basicInput" name="score">
+                                                </form>
+                                            }
+                                            else
+                                            {
+                                                if (ViewBag.UserReatedScore == 1)
+                                                {
+                                                    <div style="font-size: 25px;">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </div> <br />
+                                                    <div style="font-size: 20px">Có @ViewBag.RatingScore đã đánh giá</div>
+                                                }
+                                                if (ViewBag.UserReatedScore == 2)
+                                                {
+                                                    <div style="font-size: 25px;">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </div> <br />
+                                                    <div style="font-size: 20px">Có @ViewBag.RatingScore đã đánh giá</div>
+                                                }
+                                                if (ViewBag.UserReatedScore == 3)
+                                                {
+                                                    <div style="font-size: 25px;">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </div> <br />
+                                                    <div style="font-size: 20px">Có @ViewBag.RatingScore đã đánh giá</div>
+                                                }
+                                                if (ViewBag.UserReatedScore == 4)
+                                                {
+                                                    <div style="font-size: 25px;">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </div> <br />
+                                                    <div style="font-size: 20px">Có @ViewBag.RatingScore đã đánh giá</div>
+                                                }
+                                                if (ViewBag.UserReatedScore == 5)
+                                                {
+                                                    <div style="font-size: 25px;">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div> <br />
+                                                    <div style="font-size: 20px">Có @ViewBag.RatingScore đã đánh giá</div>
+                                                }
+                                            }
+
+                                        </div>
+                                        <div class="post-content_item">
+                                            <div class="summary-heading">
+                                                <h5>
+                                                    Author(s)
+                                                </h5>
+                                            </div>
+                                            <div class="summary-content">
+                                                <div class="author-content">
+                                                    <a href="#" rel="tag">@Model.Author</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="post-content_item">
+                                            <div class="summary-heading">
+                                                <h5>
+                                                    Genres
+                                                </h5>
+                                            </div>
+                                            <div class="summary-content">
+                                                <div class="genres-content">
+                                                    @foreach (var genre in ViewBag.ListGenreByManga)
+                                                    {
+                                                        <a href="#" rel="tag">@genre.Name</a>
+                                                    }
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-content_item">
+                                            <div class="summary-heading">
+                                                <h5>
+                                                    Release
+                                                </h5>
+                                            </div>
+                                            <div class="summary-content">
+                                                <a href="#" rel="tag">@Model.ReleaseYear</a>
+                                            </div>
+                                        </div>
+                                        <div class="post-content_item">
+                                            <div class="summary-heading">
+                                                <h5>
+                                                    Status
+                                                </h5>
+                                            </div>
+                                            <div class="summary-content">
+                                                @if (Model.MangaStatus == 0)
+                                                {
+                                                    <span>On Going</span>
+                                                }
+                                                else if (Model.MangaStatus == 1)
+                                                {
+                                                    <span>Full</span>
+                                                }
+                                                else
+                                                {
+                                                    <span></span>
+                                                }
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="post-status">
+
+                                        <div class="manga-action">
+                                            <div class="count-comment">
+                                                <div class="action_icon">
+                                                    <a href="#manga-discussion"><i class="icon ion-md-chatbubbles"></i></a>
+                                                </div>
+                                                <div class="action_detail">
+                                                    <span class="disqus-comment-count" data-disqus-url="/manga-text-chapter/">Comments</span>
+                                                </div>
+                                            </div>
+                                            <div class="add-bookmark">
+                                                <div class="action_icon">
+                                                    <a href="/bookmark-manga-@Model.Id" class="wp-manga-action-button" data-action="bookmark" data-post="454" data-chapter="" data-page="1" title="Bookmark"><i class="icon ion-ios-bookmark"></i></a>
+                                                </div>
+                                                <div class="action_detail"><span>Bookmarked This</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @foreach (var first in ViewBag.ListChapterByMangaFirst)
+                                    {
+                                        <div id="init-links" class="nav-links">
+                                            <a asp-controller="Manga" asp-action="ChapterDetail" asp-route-chapterSlug="@first.Slug" id="btn-read-last" class="c-btn c-btn_style-1"> Đọc Ngay </a>
+                                        </div>
+                                    }
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="c-page-content style-1">
+            <div class="content-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="main-col col-md-12 col-sm-12 sidebar-hidden">
+                            <!-- container & no-sidebar-->
+                            <div class="main-col-inner">
+                                <div class="c-page">
+                                    <!-- <div class="c-page__inner"> -->
+                                    <div class="c-page__content">
+                                        <div class="c-blog__heading style-2 font-heading">
+                                            <h2 class="h4">
+                                                <i class="icon ion-ios-star"></i>
+                                                Summary
+                                            </h2>
+                                        </div>
+
+                                        <div class="description-summary">
+                                            <div class="summary__content show-more"
+                                                <p>
+                                                    @Model.Description
+                                                </p>
+                                            </div>
+
+                                            <div class="c-content-readmore">
+                                                <span class="btn btn-link content-readmore"> Show more </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="page-content-listing single-page">
+                                            <div class="listing-chapters_wrap cols-1 show-more">
+                                                <ul class="main version-chap no-volumn">
+                                                    @foreach (var chap in ViewBag.ListChapterByManga)
+                                                    {
+                                                        <li class="wp-manga-chapter">
+                                                            <a asp-controller="Manga" asp-action="ChapterDetail" asp-route-chapterSlug="@chap.Slug"> @chap.Name </a>
+
+                                                            <span class="chapter-release-date"> <i>@chap.ModifiedDate.ToString("dd/MM/yyyy")</i> </span>
+                                                        </li>
+                                                    }
+
+                                                </ul>
+
+                                                <div class="c-chapter-readmore">
+                                                    <span class="btn btn-link chapter-readmore"> Show more </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+
+                                <!-- comments-area -->
+
+                                <div id="manga-discussion" class="c-blog__heading style-2 font-heading">
+                                    <i class="ion-ios-star"></i>
+                                    <h4>MANGA DISCUSSION</h4>
+                                </div>
+                                <div class="manga-discussion wrapper">
+                                    <div class="hr mv40"></div>
+
+                                    <div id="madara-comments" class="comments-area">
+                                        <div id="respond" class="comment-respond">
+                                            <h4 id="reply-title" class="comment-reply-title">
+                                                Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="#" style="display: none;">Cancel reply</a></small>
+                                            </h4>
+                                            <form action="/add-manga-comment" method="post" class="comment-form">
+                                                <p class="comment-notes">
+                                                    <span id="email-notes">Your email address will not be published.</span>
+                                                    Required fields are marked <span class="required">*</span>
+                                                </p>
+                                                <input type="hidden" name="mangaId" value="@Model.Id" />
+                                                <p class="comment-form-comment">
+                                                    <textarea name="Content" cols="45" rows="8" aria-required="true" placeholder="Enter your comment here..."></textarea>
+                                                </p>
+                                                <p class="form-submit">
+                                                    <input name="submit" type="submit" id="submit" class="submit" value="Post Comment" />
+                                                </p>
+                                            </form>
+                                        </div>
+                                        <!-- #respond -->
+                                        <h4 class="comments-title">
+                                            Comments
+                                        </h4>
+                                        <ol class="comment-list" id="comments">
+                                            @foreach (var cmt in ViewBag.ListComment)
+                                            {
+                                                <li class="comment byuser comment-author-san4es_tv even thread-even depth-1" id="comment-717">
+                                                    <article id="div-comment-717" class="comment-body">
+                                                        <div class="block block-left">
+                                                            <footer class="comment-meta">
+                                                                <div class="comment-avatar">
+                                                                    @if (cmt.AuthorAvatar == null)
+                                                                    {
+                                                                        <img src="~/uploads/avatar/noavt.jpg" />
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <img alt="" src="~/uploads/avatar/@cmt.AuthorAvatar" srcset="~/uploads/avatar/@cmt.AuthorAvatar 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy">
+                                                                    }
+                                                                </div>
+                                                            </footer>
+                                                            <!-- .comment-meta -->
+                                                        </div>
+                                                        <div class="block block-right">
+                                                            <div class="comment-author">
+                                                                <h6 class="heading fn">@cmt.AuthorName</h6>
+                                                            </div>
+                                                            <!--!comment-author-->
+                                                            <div class="comment-content">
+                                                                <p>@cmt.Content</p>
+                                                            </div>
+                                                            <!-- .comment-content -->
+                                                            <div class="comment-metadata">
+                                                                <a href="#">
+                                                                    @cmt.PublishedDate.ToString("MM/dd/yyyy h:mm tt")
+                                                                </a>
+                                                            </div>
+                                                            <!-- .comment-metadata -->
+                                                        </div>
+
+
+                                                    </article>
+                                                </li>
+                                            }
+                                            <!-- #comment-## -->
+                                        </ol>
+                                    </div>
+                                    <!-- #comments -->
+                                </div>
+
+                                <!-- END comments-area -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://www.jqueryscript.net/demo/rating-star-icons/dist/rating.js"></script>
+    <script>
+        $("#basic").rating({
+            "click": function (e) {
+                console.log(e);
+                $("#basicInput").val(e.stars);
+                $("#formRating").submit();
+            }
+        });
+    </script>
+}

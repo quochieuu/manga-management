@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>@ViewData["Title"] - Manga Book Admin</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./../../admin/images/favicon.png">
+    <link rel="stylesheet" href="./../../admin/vendor/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./../../admin/vendor/owl-carousel/css/owl.theme.default.min.css">
+    <link href="./../../admin/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
+    <link href="./../../admin/css/style.css" rel="stylesheet">
+    <link href="./../../admin/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <a href="/" class="brand-logo">
+                <img class="logo-abbr" src="./../../admin/images/logo.png" alt="">
+                <img class="logo-compact" src="./../../admin/images/logo-text.png" alt="">
+                <img class="brand-title" src="./../../admin/images/logo-text.png" alt="">
+            </a>
+
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">
+            <div class="header-content">
+                <nav class="navbar navbar-expand">
+                    <div class="collapse navbar-collapse justify-content-between">
+                        <div class="header-left">
+                            <div class="search_bar dropdown">
+                                <span class="search_icon p-3 c-pointer" data-toggle="dropdown">
+                                    <i class="mdi mdi-magnify"></i>
+                                </span>
+                                <div class="dropdown-menu p-0 m-0">
+                                    <form>
+                                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="navbar-nav header-right">
+                            <li class="nav-item dropdown header-profile">
+                                <a class="nav-link" href="#" role="button" data-toggle="dropdown">
+                                    <i class="mdi mdi-account"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="/ho-so" class="dropdown-item">
+                                        <i class="icon-user"></i>
+                                        <span class="ml-2">Profile </span>
+                                    </a>
+                                    <a href="/cap-nhat-ho-so" class="dropdown-item">
+                                        <i class="icon-envelope-open"></i>
+                                        <span class="ml-2">Update Profile </span>
+                                    </a>
+                                    <a href="/dang-xuat" class="dropdown-item">
+                                        <i class="icon-key"></i>
+                                        <span class="ml-2">Logout </span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="quixnav">
+            <div class="quixnav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li>
+                        <a class="has-arrow" href="/admin" aria-expanded="false">
+                            <i class="icon icon-single-04"></i><span class="nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon icon-app-store"></i><span class="nav-text">Quản lý truyện</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/admin/manga">Tất cả truyện</a></li>
+                            <li><a href="/admin/manga/pending-manga">Tất cả truyện chờ duyệt</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon icon-chart-bar-33"></i><span class="nav-text">Người dùng và Quyền</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/admin/auth/users">Tất cả user</a></li>
+                            <li><a href="/admin/auth/list-roles">Tất cả quyền</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon icon-world-2"></i><span class="nav-text">Hệ thống</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/admin/menu">Quản lý menu</a></li>
+                            @*<li><a href="/admin/genre">Quản lý thể loại</a></li>
+                            <li><a href="/admin/comment">Quản lý bình luận</a></li>*@
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+            <!-- row -->
+            <div class="container-fluid">
+                @RenderBody()
+                
+
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright © Designed &amp; Developed by <a href="#" target="_blank">Nhom ?</a></p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+        <!--**********************************
+           Support ticket button start
+        ***********************************-->
+        <!--**********************************
+           Support ticket button end
+        ***********************************-->
+
+
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="./../../admin/vendor/global/global.min.js"></script>
+    <script src="./../../admin/js/quixnav-init.js"></script>
+    <script src="./../../admin/js/custom.min.js"></script>
+
+
+    <!-- Vectormap -->
+    <script src="./../../admin/vendor/raphael/raphael.min.js"></script>
+    <script src="./../../admin/vendor/morris/morris.min.js"></script>
+
+
+    <script src="./../../admin/vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="./../../admin/vendor/chart.js/Chart.bundle.min.js"></script>
+
+    <script src="./../../admin/vendor/gaugeJS/dist/gauge.min.js"></script>
+
+    <!--  flot-chart js -->
+    <script src="./../../admin/vendor/flot/jquery.flot.js"></script>
+    <script src="./../../admin/vendor/flot/jquery.flot.resize.js"></script>
+
+    <!-- Owl Carousel -->
+    <script src="./../../admin/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+    <!-- Counter Up -->
+    <script src="./../../admin/vendor/jqvmap/js/jquery.vmap.min.js"></script>
+    <script src="./../../admin/vendor/jqvmap/js/jquery.vmap.usa.js"></script>
+    <script src="./../../admin/vendor/jquery.counterup/jquery.counterup.min.js"></script>
+
+
+    <script src="./../../admin/js/dashboard/dashboard-1.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>

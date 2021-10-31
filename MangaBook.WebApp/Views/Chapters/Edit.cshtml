@@ -1,0 +1,70 @@
+﻿@model MangaBook.Data.Entities.Chapter
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<link href="~/css/profile.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="dashboard-body">
+        <div class="dashboard-caption">
+            <div class="dashboard-caption-header">
+                <h4><i class="ti-id-badge"></i>Quản lý chap</h4>
+            </div>
+
+            <div class="dashboard-caption-wrap">
+                <!-- row -->
+                <div class="row mrg-top-20">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <form asp-action="Edit">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="Id" />
+                            <div class="form-group">
+                                <label asp-for="Name" class="control-label"></label>
+                                <input asp-for="Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Slug" class="control-label"></label>
+                                <input asp-for="Slug" class="form-control" />
+                                <span asp-validation-for="Slug" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Number" class="control-label"></label>
+                                <input asp-for="Number" class="form-control" />
+                                <span asp-validation-for="Number" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Content" class="control-label"></label>
+                                <textarea asp-for="Content" class="form-control" id="post__content-create"></textarea>
+                                <span asp-validation-for="Content" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" value="Save" class="btn btn-primary" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <!--  summernote JS
+    ============================================ -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="~/lib/summernote/summernote.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                $('#post__content-create').summernote({
+                    height: 520,
+                });
+            });
+        });
+    </script>
+
+}

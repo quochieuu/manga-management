@@ -1,0 +1,64 @@
+﻿@model IEnumerable<MangaBook.Data.ViewModel.ListBookmarkViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link href="~/css/profile.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="dashboard-body">
+        <div class="dashboard-caption">
+            <div class="dashboard-caption-header">
+                <h4><i class="ti-id-badge"></i>My Bookmark</h4>
+            </div>
+
+            <div class="dashboard-caption-wrap">
+                <!-- row -->
+                <div class="row mrg-top-20">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.MangaImage)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.MangaTitle)
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @if (item.MangaImage != null)
+                                            {
+                                                <img src="~/uploads/manga/@item.MangaImage" style="width:70px" />
+                                            } else
+                                            {
+                                                <img src="~/uploads/manga/7b42ccea-e01b-4af8-b532-f8cf4237179a.jpg" />
+                                            }
+
+                                        </td>
+                                        <td>
+                                            <a href="#" target="_blank">@item.MangaTitle</a> <br />
+                                            @item.BookmarkedDate.ToString("MM/dd/yyyy h:mm tt")
+                                        </td>
+                                        <td>
+                                            <a asp-action="Delete" asp-route-id="@item.BookmarkId">x</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        

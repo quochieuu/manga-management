@@ -1,0 +1,228 @@
+﻿@{
+    ViewData["Title"] = "Trang Chủ";
+}
+
+<div class="c-sidebar c-top-sidebar home-recent-slider" style="background-image: url(https://live.mangabooth.com/wp-content/uploads/2017/10/gplaypattern.png); padding: 50px 5px;">
+    <div class="container c-container">
+        <div class="row c-row">
+            <div id="manga-slider-4" class="widget col-12 col-md-12 default no-icon heading-style-1 manga-widget widget-manga-slider">
+                <div class="widget__inner manga-widget widget-manga-slider__inner c-widget-wrap">
+                    <div class="widget-content">
+                        <div class="manga-slider style-2" data-autoplay="0" data-style="style-2" data-count="2">
+                            <div class="slider__container" role="toolbar">
+
+                                @foreach (var slide in ViewBag.RecentManga)
+                                {
+                                <div class="slider__item">
+                                    <div class="slider__thumb">
+                                        <div class="slider__thumb_item">
+                                            <span class="manga-title-badges new">NEW</span>
+                                            <a asp-controller="Manga" asp-action="Details" asp-route-slug="@slide.Slug">
+                                                <img width="642"
+                                                     height="320"
+                                                     data-src="./uploads/manga/@slide.UrlImage"
+                                                     class="img-responsive lazyload effect-fade"
+                                                     src="./uploads/manga/@slide.UrlImage"
+                                                     style="padding-top: 49.844236760125%;"
+                                                     alt="@slide.Name" />
+                                                <div class="slider-overlay"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="slider__content">
+                                        <div class="slider__content_item">
+                                            <div class="post-title font-title">
+                                                <h4>
+                                                    <a asp-controller="Manga" asp-action="Details" asp-route-slug="@slide.Slug">@slide.Name</a>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                }
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="manga-popular-slider-5" class="widget col-12 col-md-12 default heading-style-2 manga-widget widget-manga-popular-slider">
+                <div class="widget__inner manga-widget widget-manga-popular-slider__inner c-widget-wrap">
+                    <div class="popular-slider style-1" data-autoplay="0" data-style="style-1" data-count="4">
+                        <div class="c-blog__heading style-2 font-heading">
+                            <h4><i class="icon ion-md-flash"></i>POPULAR MANGA UPDATES</h4>
+                        </div>
+                        <div class="widget-content">
+                            <div class="slider__container" role="toolbar">
+                                @foreach (var hotItem in ViewBag.HotManga)
+                                {
+                                <div class="slider__item">
+                                    <div class="item__wrap">
+                                        <div class="slider__thumb">
+                                            <div class="slider__thumb_item c-image-hover">
+                                                <span class="manga-title-badges new">NEW</span>
+                                                <a asp-controller="Manga" asp-action="Details" asp-route-slug="@hotItem.Slug">
+                                                    <img width="125"
+                                                         height="180"
+                                                         data-src="./uploads/manga/@hotItem.UrlImage"
+                                                         data-srcset="./uploads/manga/@hotItem.UrlImage 125w, ./uploads/manga/@hotItem.UrlImage 193w"
+                                                         data-sizes="(max-width: 125px) 100vw, 125px"
+                                                         class="img-responsive lazyload effect-fade"
+                                                         src="./uploads/manga/@hotItem.UrlImage"
+                                                         style="padding-top: 180px;"
+                                                         alt="@hotItem.Name" />
+                                                    <div class="slider-overlay"></div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="slider__content">
+                                            <div class="slider__content_item">
+                                                <div class="post-title font-title">
+                                                    <h4>
+                                                        <a asp-controller="Manga" asp-action="Details" asp-route-slug="@hotItem.Slug">@hotItem.Name</a>
+                                                    </h4>
+                                                </div>
+                                                <div class="post-on font-meta">
+                                                    <span> @hotItem.ModifiedDate.ToString("dd/MM/yyyy") </span>
+                                                </div>
+
+                                                @*<div class="chapter-item">
+                                                    <span class="chapter">
+                                                        <a href="https://live.mangabooth.com/manga/manga-text-chapter/chapter-3/">Chapter 3</a>
+                                                    </span>
+
+                                                    <span class="chapter">
+                                                        <a href="https://live.mangabooth.com/manga/manga-text-chapter/chapter-2/">Chapter 2</a>
+                                                    </span>
+                                                </div>*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                }
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-content">
+    <div class="c-page-content style-1">
+        <div class="content-area" style="margin-top: 50px;">
+            <div class="container">
+                <div class="row">
+                    <div class="main-col col-md-8 col-sm-8">
+                        <div class="ad c-ads custom-code body-top-ads"><img width="730" height="92" src="https://live.mangabooth.com/wp-content/uploads/2017/10/ads-1.jpg" alt="Madara Ads Before Content" /></div>
+
+                        <div class="main-col-inner c-page">
+                            <div class="c-blog__heading style-2 font-heading">
+                                <h1 class="h4">
+                                    <i class="icon ion-md-star"></i>
+
+                                    LATEST MANGA UPDATES
+                                </h1>
+                            </div>
+
+                            <div class="c-blog-listing c-page__content manga_content">
+                                <div class="c-blog__inner">
+                                    <div class="c-blog__content">
+                                        <div id="loop-content" class="page-content-listing item-big_thumbnail">
+                                            <div class="page-listing-item">
+                                                <div class="row row-eq-height">
+                                                    @foreach (var post in ViewBag.ListManga)
+                                                    {
+                                                    <div class="col-6 col-md-3 badge-pos-1">
+                                                        <div class="page-item-detail video">
+                                                            <div id="manga-item-449" class="item-thumb hover-details c-image-hover" data-post-id="449">
+                                                                <a asp-controller="Manga" asp-action="Details" asp-route-slug="@post.Slug" title="Manga Video Chapters">
+                                                                    <img width="175"
+                                                                         height="238"
+                                                                         data-src="./uploads/manga/@post.UrlImage"
+                                                                         data-srcset="./uploads/manga/@post.UrlImage 175w, ./uploads/manga/@post.UrlImage 110w"
+                                                                         data-sizes="(max-width: 175px) 100vw, 175px"
+                                                                         class="img-responsive lazyload effect-fade"
+                                                                         src="./uploads/manga/@post.UrlImage"
+                                                                         style="padding-top: 238px;"
+                                                                         alt="./uploads/manga/@post.Name" />
+                                                                </a>
+                                                            </div>
+                                                            <div class="item-summary">
+                                                                <div class="post-title font-title">
+                                                                    <h3 class="h5">
+                                                                        <span class="manga-title-badges new">NEW</span> 
+                                                                        <a asp-controller="Manga" asp-action="Details" asp-route-slug="@post.Slug">@post.Name</a>
+                                                                    </h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    }
+                                                    
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <nav class="navigation-ajax">
+                                            <a href="/truyen-moi-nhat" id="navigation-ajax" class="btn btn-default load-ajax">
+                                                <div class="load-title">Xem thêm <i class="icon ion-md-arrow-dropdown"></i></div>
+                                                &nbsp;
+                                                <div></div>
+                                                &nbsp;
+                                                <div></div>
+                                                &nbsp;
+                                                <div></div>
+                                            </a>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="sidebar-col col-md-4 col-sm-4">
+                        <div id="main-sidebar" class="main-sidebar" role="complementary">
+                            <div class="row">
+                                <div id="manga-genres-id-7" class="widget col-xs-12 col-md-12 bordered no-icon heading-style-1 manga-genres-class-name">
+                                    <div class="widget__inner manga-genres-class-name__inner c-widget-wrap">
+                                        <div class="genres_wrap">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="widget-heading font-nav"><h5 class="heading">GENRES</h5></div>
+                                                    <div class="widget-content">
+                                                        <div class="genres__collapse" style="display: block;">
+                                                            <div class="row genres">
+                                                                <ul class="list-unstyled">
+                                                                    @foreach (var cate in ViewBag.ListGenre)
+                                                                    {
+                                                                        <li class="col-xs-6 col-sm-6">
+                                                                            <a asp-controller="Manga" asp-action="ListMangaByGenre" asp-route-genreSlug="@cate.Slug"> @cate.Name </a>
+                                                                        </li>
+                                                                    }
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

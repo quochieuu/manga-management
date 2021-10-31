@@ -1,0 +1,130 @@
+﻿:root {
+    --madara-main-color: #eb3349;
+}
+
+#pageloader.spinners {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background: #222;
+}
+
+p.madara-unyson {
+    color: #ff0000;
+}
+
+.table.table-hover.list-bookmark tr:last-child td {
+    text-align: center;
+}
+
+#adminmenu .wp-submenu li.current {
+    display: none !important;
+}
+
+.show_tgmpa_version {
+    float: right;
+    padding: 0em 1.5em 0.5em 0;
+}
+
+.tgmpa > h2 {
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 29px;
+    margin: 0;
+    padding: 9px 15px 4px 0;
+}
+
+.update-php {
+    width: 100%;
+    height: 98%;
+    min-height: 850px;
+    padding-top: 1px;
+}
+
+.c-blog-post .entry-content .entry-content_wrap .read-container img.alignleft {
+    margin: 10px 30px 10px 0 !important;
+}
+
+.c-blog-post .entry-content .entry-content_wrap .read-container img.alignright {
+    margin: 10px 0px 10px 30px !important;
+}
+
+.read-container i.fas.fa-spinner.fa-spin {
+    font-size: 31px;
+    color: #888;
+}
+
+.c-blog-post .entry-content .entry-content_wrap .read-container img {
+    cursor: pointer;
+}
+
+.choose-avatar .loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.72);
+    z-index: 1;
+    display: none;
+}
+
+    .choose-avatar .loading-overlay i.fas.fa-spinner {
+        font-size: 40px;
+        color: #ec3348;
+    }
+
+    .choose-avatar .loading-overlay .loading-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+.choose-avatar.uploading .loading-overlay {
+    display: block;
+}
+
+.site-header .c-sub-header-nav .entry-header {
+    display: none;
+    margin-bottom: 15px;
+}
+
+.site-header .c-sub-header-nav.sticky .entry-header {
+    display: block;
+}
+
+.site-header .c-sub-header-nav.hide-sticky-menu.sticky .c-sub-nav_wrap {
+    display: none;
+}
+
+.site-header .c-sub-header-nav.hide-sticky-menu .entry-header {
+    margin-top: 15px;
+}
+
+@media (max-width: 480px) {
+    .c-blog-post .entry-content .entry-content_wrap .reading-content {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+.settings-page table.list-bookmark > tbody tr td > div.mange-name:before {
+    content: "Manga Name";
+}
+
+.settings-page table.list-bookmark > tbody tr td > div.action:before {
+    content: "Edit";
+}
+
+.settings-page table.list-bookmark > tbody tr td > div.post-on:before {
+    content: "Updated Time";
+}
+
+.home .popular-slider.style-1 .c-blog__heading.style-2 h4 {
+    color: #fff;
+}
+

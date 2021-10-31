@@ -1,0 +1,108 @@
+﻿@model MangaBook.Data.Entities.AppUser
+
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<link href="~/css/profile.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="dashboard-body">
+        <div class="dashboard-caption">
+            <div class="dashboard-caption-header">
+                <h4><i class="ti-id-badge"></i>My Profile</h4>
+            </div>
+
+            <div class="dashboard-caption-wrap">
+                <!-- row -->
+                <div class="row mrg-top-20">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        @if (Model.UrlAvatar == null)
+                        {
+                            <img src="~/uploads/avatar/noavt.jpg" style="width: 140px; border-radius: 8px" />
+                        }
+                        else
+                        {
+                            <img src="~/uploads/avatar/@Model.UrlAvatar" style="width: 140px; border-radius: 8px" />
+                        }
+
+                    <form action="/cap-nhat-anh" method="post" enctype="multipart/form-data">
+                        <a href="#" id="actionChangeImage">Đổi Ảnh</a>
+                        <div class="form-group chang-image-inactive" id="changImage">
+                            <label class="control-label"></label>
+                            <input id="ipFile" type="hidden" name="files" class="form-control" />
+                            <input type="hidden" name="Id" class="form-control" value="@Model.Id" />
+                            <input type="submit" class="btn btn-primary" id="btnFile" />
+                        </div>
+                    </form>
+
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label>Full Name*</label>
+                            <input type="text" class="form-control" placeholder="Enter Name" value="@Model.FullName" readonly />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label>UserName</label>
+                            <input class="form-control" value="@Model.UserName" readonly />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="text" class="form-control" readonly placeholder="91 256 254 4578" value="@Model.PhoneNumber" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label>Birthday</label>
+                            <input type="text" readonly value="@Model.Birth.ToString("dd/MM/yyyy")" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label>Address*</label>
+                            <input type="text" readonly class="form-control" placeholder="Enter Headlines" value="@Model.Address" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label>Gender</label>
+                            <input type="text" readonly value="@if (Model.Gender == 0) { Write("Nam"); } else if (Model.Gender == 1) { Write("Nữ"); } else if (Model.Gender == 2) { Write("Không xác định"); } else { Write("..."); } " />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <label>Info*</label>
+                            <textarea type="text" readonly class="form-control" placeholder="Enter Headlines">@Model.Description </textarea>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .chang-image-inactive {
+        display: none;
+    }
+
+    .chang-image-active {
+        display: block;
+    }
+</style>
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+        $("#btnFile").hide();
+        $("#actionChangeImage").click(function () {
+            $("#changImage").attr("class", "form-group chang-image-active");
+            $("#ipFile").attr("type", "file");
+            $("#btnFile").show();
+        })
+    </script>
+}

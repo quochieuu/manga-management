@@ -1,0 +1,56 @@
+﻿@model IEnumerable<MangaBook.Data.ViewModel.CommentDetailViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link href="~/css/profile.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="dashboard-body">
+        <div class="dashboard-caption">
+            <div class="dashboard-caption-header">
+                <h4><i class="ti-id-badge"></i>My Commented</h4>
+            </div>
+
+            <div class="dashboard-caption-wrap">
+                <!-- row -->
+                <div class="row mrg-top-20">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Content)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.PublishedDate)
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            <span class="tbl-cmt">
+                                                <a target="_blank" href="/@item.MangaSlug">@item.Content</a>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            @item.PublishedDate.ToString("MM/dd/yyyy h:mm tt")
+                                        </td>
+                                        <td>
+                                            <a asp-action="Delete" asp-route-id="@item.CommentId">x</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
